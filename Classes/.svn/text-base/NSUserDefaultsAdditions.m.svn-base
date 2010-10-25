@@ -1,0 +1,41 @@
+//
+//  NSUserDefaultsAdditions.m
+//  ObjCAdditions
+//
+//  Created by Natālija Dudareva on 8/25/10.
+//  Copyright 2010 A25. All rights reserved.
+//
+
+#import "NSUserDefaultsAdditions.h"
+
+#define kCenterLat @"centerLat"
+#define kCenterLon @"centerLon"
+#define kSpanLat @"spanLat"
+#define kSpanLon @"spanLon"
+
+@implementation NSUserDefaults (NSUserDefaultsAdditions)
+
+- (MKCoordinateRegion)coordinateRegionForKey:(NSString *)key {
+	NSDictionary *regionDictionary = [self dictionaryForKey:key];
+	
+	CLLocationDegrees lat = [[regionDictionary objectForKey:kCenterLat] doubleValue];
+	CLLocationDegrees lon = [[regionDictionary objectForKey:kCenterLon] doubleValue];
+	CLLocationDegrees latDelta = [[regionDictionary objectForKey:kSpanLat] doubleValue];
+	CLLocationDegrees lonDelta = [[regionDictionary objectForKey:kSpanLon] doubleValue];
+	
+	CLLocationCoordinate2D center = {lat, lon};
+	MKCoordinateSpan span = MKCoordinateSpanMake(latDelta, lonDelta);
+	
+	return MKCoordinateRegionMake(center, span);
+}
+
+- (void)setCoordinateRegion:(MKCoordinateRegion)region forKey:(NSString *)key {
+	NSDictionary *regionDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+									  [NSNumber numberWithDouble:region.center.latitude], kCenterLat,
+									  [NSNumber numberWithDouble:region.center.longitude], kCenterLon,
+									  [NSNumber numberWithDouble:region.span.latitudeDelta], kSpanLat,
+									  [NSNumber numberWithDouble:region.span.longitudeDelta], kSpanLon, nil];
+	[self setObject:regionDictionary forKey:key];
+}
+
+@end
