@@ -7,24 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1788E28F1212C62000E55682 /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28B1212C62000E55682 /* Macros.h */; };
-		1788E2901212C62000E55682 /* NSStringMD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28C1212C62000E55682 /* NSStringMD5.h */; };
-		1788E2911212C62000E55682 /* NSStringMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 1788E28D1212C62000E55682 /* NSStringMD5.m */; };
+		17483240127F7C250073918D /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 1748323F127F7C250073918D /* NSString+MD5.h */; };
+		17483244127F7C340073918D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483241127F7C340073918D /* NSString+MD5.m */; };
+		17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */; };
+		17483246127F7C340073918D /* NSUserDefaults+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
-		3783BC3D122553CE00FC0B1B /* NSUserDefaultsAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3783BC3B122553CE00FC0B1B /* NSUserDefaultsAdditions.h */; };
-		3783BC3E122553CE00FC0B1B /* NSUserDefaultsAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3783BC3C122553CE00FC0B1B /* NSUserDefaultsAdditions.m */; };
 		3783BC401225544600FC0B1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3783BC3F1225544600FC0B1B /* MapKit.framework */; };
 		AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1788E28B1212C62000E55682 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
-		1788E28C1212C62000E55682 /* NSStringMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringMD5.h; sourceTree = "<group>"; };
-		1788E28D1212C62000E55682 /* NSStringMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringMD5.m; sourceTree = "<group>"; };
+		1748323F127F7C250073918D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		17483241127F7C340073918D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+OAAdditions.h"; sourceTree = "<group>"; };
+		17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+OAAdditions.m"; sourceTree = "<group>"; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
-		3783BC3B122553CE00FC0B1B /* NSUserDefaultsAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsAdditions.h; sourceTree = "<group>"; };
-		3783BC3C122553CE00FC0B1B /* NSUserDefaultsAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsAdditions.m; sourceTree = "<group>"; };
 		3783BC3F1225544600FC0B1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCAdditions_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,14 +73,29 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1788E28B1212C62000E55682 /* Macros.h */,
-				1788E28E1212C62000E55682 /* SynthesizeSingleton.h */,
-				1788E28C1212C62000E55682 /* NSStringMD5.h */,
-				1788E28D1212C62000E55682 /* NSStringMD5.m */,
-				3783BC3B122553CE00FC0B1B /* NSUserDefaultsAdditions.h */,
-				3783BC3C122553CE00FC0B1B /* NSUserDefaultsAdditions.m */,
+				1748323E127F7BF00073918D /* Additions */,
+				1748323D127F7BC00073918D /* Macros */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		1748323D127F7BC00073918D /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				1788E28E1212C62000E55682 /* SynthesizeSingleton.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		1748323E127F7BF00073918D /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				1748323F127F7C250073918D /* NSString+MD5.h */,
+				17483241127F7C340073918D /* NSString+MD5.m */,
+				17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */,
+				17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */,
+			);
+			path = Additions;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -101,10 +114,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */,
-				1788E28F1212C62000E55682 /* Macros.h in Headers */,
-				1788E2901212C62000E55682 /* NSStringMD5.h in Headers */,
 				1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */,
-				3783BC3D122553CE00FC0B1B /* NSUserDefaultsAdditions.h in Headers */,
+				17483240127F7C250073918D /* NSString+MD5.h in Headers */,
+				17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +147,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjCAdditions" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* ObjCAdditions */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -151,8 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1788E2911212C62000E55682 /* NSStringMD5.m in Sources */,
-				3783BC3E122553CE00FC0B1B /* NSUserDefaultsAdditions.m in Sources */,
+				17483244127F7C340073918D /* NSString+MD5.m in Sources */,
+				17483246127F7C340073918D /* NSUserDefaults+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +220,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
