@@ -32,7 +32,7 @@
  System version check is taken from GLES2Sample:
  https://developer.apple.com/library/ios/#samplecode/GLES2Sample/Listings/Classes_EAGLView_m.html%23//apple_ref/doc/uid/DTS40009188-Classes_EAGLView_m-DontLinkElementID_4
  */
-- (void)systemVersionEqualsOrLater:(NSString *)requiredVersion {
+- (BOOL)systemVersionEqualsOrLater:(NSString *)requiredVersion {
 	NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
 	return ([systemVersion compare:requiredVersion options:NSNumericSearch] != NSOrderedAscending);
 }

@@ -31,6 +31,6 @@
 /**
  Checks the currect system version, is it equal to required or later.
  */
-- (void)systemVersionEqualsOrLater:(NSString *)requiredVersion;
+- (BOOL)systemVersionEqualsOrLater:(NSString *)requiredVersion;
 
 @end
