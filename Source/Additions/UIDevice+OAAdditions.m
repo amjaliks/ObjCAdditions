@@ -1,5 +1,5 @@
 //
-//  NSUserDefaults+OAAdditions.h
+//  UIDevice+OAAdditions.m
 //  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA
@@ -23,12 +23,18 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
+#import "UIDevice+OAAdditions.h"
 
-@interface NSUserDefaults (OAAdditions)
 
-- (MKCoordinateRegion)coordinateRegionForKey:(NSString *)key;
-- (void)setCoordinateRegion:(MKCoordinateRegion)region forKey:(NSString *)key;
+@implementation UIDevice (OAAdditions)
+
+/*
+ System version check is taken from GLES2Sample:
+ https://developer.apple.com/library/ios/#samplecode/GLES2Sample/Listings/Classes_EAGLView_m.html%23//apple_ref/doc/uid/DTS40009188-Classes_EAGLView_m-DontLinkElementID_4
+ */
+- (void)systemVersionEqualsOrLater:(NSString *)requiredVersion {
+	NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
+	return ([systemVersion compare:requiredVersion options:NSNumericSearch] != NSOrderedAscending);
+}
 
 @end

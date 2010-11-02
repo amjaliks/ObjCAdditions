@@ -13,6 +13,8 @@
 		17483246127F7C340073918D /* NSUserDefaults+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */; };
 		1748326B127F7F550073918D /* OANetworkActivityIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 17483269127F7F550073918D /* OANetworkActivityIndicator.h */; };
 		1748326C127F7F550073918D /* OANetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748326A127F7F550073918D /* OANetworkActivityIndicator.m */; };
+		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
+		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
 		3783BC401225544600FC0B1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3783BC3F1225544600FC0B1B /* MapKit.framework */; };
 		AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */; };
@@ -26,6 +28,8 @@
 		17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+OAAdditions.m"; sourceTree = "<group>"; };
 		17483269127F7F550073918D /* OANetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OANetworkActivityIndicator.h; sourceTree = "<group>"; };
 		1748326A127F7F550073918D /* OANetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OANetworkActivityIndicator.m; sourceTree = "<group>"; };
+		174832F9127FF5850073918D /* UIDevice+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+OAAdditions.h"; sourceTree = "<group>"; };
+		174832FA127FF5850073918D /* UIDevice+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OAAdditions.m"; sourceTree = "<group>"; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		3783BC3F1225544600FC0B1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCAdditions_Prefix.pch; sourceTree = SOURCE_ROOT; };
@@ -102,6 +106,8 @@
 				17483241127F7C340073918D /* NSString+MD5.m */,
 				17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */,
 				17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */,
+				174832F9127FF5850073918D /* UIDevice+OAAdditions.h */,
+				174832FA127FF5850073918D /* UIDevice+OAAdditions.m */,
 			);
 			name = Additions;
 			path = Source/Additions;
@@ -127,6 +133,7 @@
 				17483240127F7C250073918D /* NSString+MD5.h in Headers */,
 				17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */,
 				1748326B127F7F550073918D /* OANetworkActivityIndicator.h in Headers */,
+				174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +190,7 @@
 				17483244127F7C340073918D /* NSString+MD5.m in Sources */,
 				17483246127F7C340073918D /* NSUserDefaults+OAAdditions.m in Sources */,
 				1748326C127F7F550073918D /* OANetworkActivityIndicator.m in Sources */,
+				174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

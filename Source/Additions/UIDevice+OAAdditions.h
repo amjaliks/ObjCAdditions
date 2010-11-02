@@ -1,5 +1,5 @@
 //
-//  NSUserDefaults+OAAdditions.h
+//  UIDevice+OAAdditions.h
 //  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA
@@ -24,11 +24,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
 
-@interface NSUserDefaults (OAAdditions)
 
-- (MKCoordinateRegion)coordinateRegionForKey:(NSString *)key;
-- (void)setCoordinateRegion:(MKCoordinateRegion)region forKey:(NSString *)key;
+@interface UIDevice (OAAdditions)
+
+/**
+ Checks the currect system version, is it equal to required or later.
+ */
+- (void)systemVersionEqualsOrLater:(NSString *)requiredVersion;
 
 @end

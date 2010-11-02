@@ -30,7 +30,7 @@
 #define kSpanLat @"spanLat"
 #define kSpanLon @"spanLon"
 
-@implementation NSUserDefaults (NSUserDefaultsAdditions)
+@implementation NSUserDefaults (OAAdditions)
 
 - (MKCoordinateRegion)coordinateRegionForKey:(NSString *)key {
 	NSDictionary *regionDictionary = [self dictionaryForKey:key];
