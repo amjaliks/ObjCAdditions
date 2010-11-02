@@ -1,5 +1,5 @@
 //
-//  NSUserDefaultsAdditions.h
+//  NSUserDefaults+OAAdditions.h
 //  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA

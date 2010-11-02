@@ -1,5 +1,5 @@
 //
-//  NSUserDefaultsAdditions.m
+//  NSUserDefaults+OAAdditions.m
 //  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA
@@ -23,7 +23,7 @@
 //  THE SOFTWARE.
 //
 
-#import "NSUserDefaultsAdditions.h"
+#import "NSUserDefaults+OAAdditions.h"
 
 #define kCenterLat @"centerLat"
 #define kCenterLon @"centerLon"

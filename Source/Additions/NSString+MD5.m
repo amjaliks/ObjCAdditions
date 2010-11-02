@@ -1,8 +1,8 @@
 //
-//  NSStringMD5.m
+//  NSString+MD5.m
 //
 
-#import "NSStringMD5.h"
+#import "NSString+MD5.h"
 
 #import <CommonCrypto/CommonDigest.h>
 
