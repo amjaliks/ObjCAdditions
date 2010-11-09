@@ -23,8 +23,6 @@
 //  THE SOFTWARE.
 //
 
-#import <Cocoa/Cocoa.h>
-
 
 @interface NSDictionary (OAAdditions)
 
