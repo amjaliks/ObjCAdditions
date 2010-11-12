@@ -28,4 +28,42 @@
 
 @implementation OATableArrayController
 
+- (void)awakeFromNib {
+	[tableView registerForDraggedTypes:[NSArray arrayWithObject:draggedType]];
+	
+	[super awakeFromNib];
+}
+
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
+	NSData *data = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes];
+    [pboard declareTypes:[NSArray arrayWithObject:draggedType] owner:self];
+    [pboard setData:data forType:draggedType];
+    return YES;
+}
+
+- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)operation {
+	// accepting only drops above the row
+	return operation == NSTableViewDropAbove ? NSDragOperationEvery : NSDragOperationNone;
+}
+
+- (BOOL)tableView:(NSTableView *)tv acceptDrop:(id <NSDraggingInfo>)info row:(NSInteger)rowIndex dropOperation:(NSTableViewDropOperation)operation {
+	// retrieving source row index
+	NSPasteboard *pboard = [info draggingPasteboard];
+	NSData *rowData = [pboard dataForType:draggedType];
+	NSIndexSet *rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:rowData];
+	NSInteger dragRowIndex = [rowIndexes firstIndex];
+	
+	// if row has been moved below, row wil be inserted at (index - 1) in order to save correct sequence
+	if (rowIndex > dragRowIndex) {
+		rowIndex -= 1;
+	}
+	
+	// moving object
+    id object = [[self arrangedObjects] objectAtIndex:dragRowIndex];
+	[self removeObjectAtArrangedObjectIndex:dragRowIndex];
+	[self insertObject:object atArrangedObjectIndex:rowIndex];
+	
+	return YES;
+}
+
 @end

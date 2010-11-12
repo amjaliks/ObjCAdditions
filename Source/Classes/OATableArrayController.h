@@ -23,10 +23,14 @@
 //  THE SOFTWARE.
 //
 
-#import <Cocoa/Cocoa.h>
-
+/*
+ Bindings compatible class with support for NSTableView drag'n'drop events.
+ 
+ Use 'User Defined Runtime Parameters' to set draggedType.
+ */
 @interface OATableArrayController : NSArrayController {
-
+	IBOutlet NSTableView *tableView;
+	NSString *draggedType;
 }
 
 @end
