@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1711B4F21288B14D005B0066 /* NSDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1711B4F01288B14D005B0066 /* NSDictionary+OAAdditions.h */; };
 		1711B4F31288B14D005B0066 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
+		1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */; };
+		1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */; };
 		17483240127F7C250073918D /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 1748323F127F7C250073918D /* NSString+MD5.h */; };
 		17483244127F7C340073918D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483241127F7C340073918D /* NSString+MD5.m */; };
 		17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		1711B4F01288B14D005B0066 /* NSDictionary+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+OAAdditions.h"; sourceTree = "<group>"; };
 		1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+OAAdditions.m"; sourceTree = "<group>"; };
+		1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+OAAdditions.h"; sourceTree = "<group>"; };
+		1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+OAAdditions.m"; sourceTree = "<group>"; };
 		1748323F127F7C250073918D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		17483241127F7C340073918D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+OAAdditions.h"; sourceTree = "<group>"; };
@@ -34,11 +38,16 @@
 		1748326A127F7F550073918D /* OANetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OANetworkActivityIndicator.m; sourceTree = "<group>"; };
 		174832F9127FF5850073918D /* UIDevice+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+OAAdditions.h"; sourceTree = "<group>"; };
 		174832FA127FF5850073918D /* UIDevice+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OAAdditions.m"; sourceTree = "<group>"; };
+		17507F26128DC48B00888147 /* OATableArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATableArrayController.h; sourceTree = "<group>"; };
+		17507F27128DC48B00888147 /* OATableArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATableArrayController.m; sourceTree = "<group>"; };
+		1750818F128DC7B700888147 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		17508191128DC7B700888147 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		17508193128DC7B700888147 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		3783BC3F1225544600FC0B1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCAdditions_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libObjCAdditions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjCAdditions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libobjcadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libobjcadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +66,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libObjCAdditions.a */,
+				D2AAC07E0554694100DB518D /* libobjcadd.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,8 +87,8 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
-				3783BC3F1225544600FC0B1B /* MapKit.framework */,
+				17508123128DC77100888147 /* iOS */,
+				1750818E128DC79C00888147 /* Mac OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,9 +98,11 @@
 			children = (
 				17483269127F7F550073918D /* OANetworkActivityIndicator.h */,
 				1748326A127F7F550073918D /* OANetworkActivityIndicator.m */,
+				17507F26128DC48B00888147 /* OATableArrayController.h */,
+				17507F27128DC48B00888147 /* OATableArrayController.m */,
 			);
 			name = Classes;
-			path = Source/Classes;
+			path = ../../Source/Classes;
 			sourceTree = SOURCE_ROOT;
 		};
 		1748323D127F7BC00073918D /* Macros */ = {
@@ -100,7 +111,7 @@
 				1788E28E1212C62000E55682 /* SynthesizeSingleton.h */,
 			);
 			name = Macros;
-			path = Source/Macros;
+			path = ../../Source/Macros;
 			sourceTree = "<group>";
 		};
 		1748323E127F7BF00073918D /* Additions */ = {
@@ -108,6 +119,8 @@
 			children = (
 				1711B4F01288B14D005B0066 /* NSDictionary+OAAdditions.h */,
 				1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */,
+				1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */,
+				1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */,
 				1748323F127F7C250073918D /* NSString+MD5.h */,
 				17483241127F7C340073918D /* NSString+MD5.m */,
 				17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */,
@@ -116,7 +129,26 @@
 				174832FA127FF5850073918D /* UIDevice+OAAdditions.m */,
 			);
 			name = Additions;
-			path = Source/Additions;
+			path = ../../Source/Additions;
+			sourceTree = "<group>";
+		};
+		17508123128DC77100888147 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				3783BC3F1225544600FC0B1B /* MapKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1750818E128DC79C00888147 /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				1750818F128DC7B700888147 /* AppKit.framework */,
+				17508191128DC7B700888147 /* Cocoa.framework */,
+				17508193128DC7B700888147 /* Foundation.framework */,
+			);
+			name = "Mac OS X";
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -141,15 +173,16 @@
 				1748326B127F7F550073918D /* OANetworkActivityIndicator.h in Headers */,
 				174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */,
 				1711B4F21288B14D005B0066 /* NSDictionary+OAAdditions.h in Headers */,
+				1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC07D0554694100DB518D /* ObjCAdditions */ = {
+		D2AAC07D0554694100DB518D /* iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ObjCAdditions" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -159,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = ObjCAdditions;
+			name = iOS;
 			productName = ObjCAdditions;
-			productReference = D2AAC07E0554694100DB518D /* libObjCAdditions.a */;
+			productReference = D2AAC07E0554694100DB518D /* libobjcadd.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +202,7 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjCAdditions" */;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjCAdditions-iOS" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -184,7 +217,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* ObjCAdditions */,
+				D2AAC07D0554694100DB518D /* iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +232,7 @@
 				1748326C127F7F550073918D /* OANetworkActivityIndicator.m in Sources */,
 				174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */,
 				1711B4F31288B14D005B0066 /* NSDictionary+OAAdditions.m in Sources */,
+				1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +253,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ObjCAdditions_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = ObjCAdditions;
+				PRODUCT_NAME = objcadd;
 			};
 			name = Debug;
 		};
@@ -267,7 +301,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ObjCAdditions" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
@@ -276,7 +310,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjCAdditions" */ = {
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjCAdditions-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,

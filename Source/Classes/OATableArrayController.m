@@ -1,5 +1,5 @@
 //
-//  NSDictionary+OAAdditions.h
+//  OATableArrayController.m
 //  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA
@@ -23,11 +23,9 @@
 //  THE SOFTWARE.
 //
 
-@interface NSDictionary (OAAdditions)
+#import "OATableArrayController.h"
 
-/*
- Returns the value associated with a given key. If no value is associated with the key, returns defaultObject.
- */
-- (id)objectForKey:(id)key defaultObject:(id)defaultObject;
+
+@implementation OATableArrayController
 
 @end

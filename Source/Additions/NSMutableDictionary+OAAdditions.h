@@ -1,5 +1,5 @@
 //
-//  NSDictionary+OAAdditions.h
+//  NSMutableDictionary.h
 //  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA
@@ -23,11 +23,15 @@
 //  THE SOFTWARE.
 //
 
-@interface NSDictionary (OAAdditions)
+#import <Foundation/Foundation.h>
+
+
+@interface NSMutableDictionary (OAAdditions)
 
 /*
- Returns the value associated with a given key. If no value is associated with the key, returns defaultObject.
+ Adds to the recieving dictionary the missing entries from another dictionary.
+ If recursive is YES, addMissingEntriesFromDictionary:recursive: or addMissingEntriesFromArray:recursive: is sent to the existing entries.
  */
-- (id)objectForKey:(id)key defaultObject:(id)defaultObject;
+- (void)addMissingEntriesFromDictionary:(NSDictionary *)otherDictionary recursive:(BOOL)recursive;
 
 @end

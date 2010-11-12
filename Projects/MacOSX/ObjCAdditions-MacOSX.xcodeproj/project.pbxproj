@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17508341128DCB8A00888147 /* NSDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17508330128DCB8A00888147 /* NSDictionary+OAAdditions.h */; };
+		17508342128DCB8A00888147 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17508331128DCB8A00888147 /* NSDictionary+OAAdditions.m */; };
+		17508343128DCB8A00888147 /* NSMutableDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17508332128DCB8A00888147 /* NSMutableDictionary+OAAdditions.h */; };
+		17508344128DCB8A00888147 /* NSMutableDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17508333128DCB8A00888147 /* NSMutableDictionary+OAAdditions.m */; };
+		17508345128DCB8A00888147 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 17508334128DCB8A00888147 /* NSString+MD5.h */; };
+		17508346128DCB8A00888147 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 17508335128DCB8A00888147 /* NSString+MD5.m */; };
+		1750834D128DCB8A00888147 /* OATableArrayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1750833D128DCB8A00888147 /* OATableArrayController.h */; };
+		1750834E128DCB8A00888147 /* OATableArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1750833E128DCB8A00888147 /* OATableArrayController.m */; };
+		1750834F128DCB8A00888147 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 17508340128DCB8A00888147 /* SynthesizeSingleton.h */; };
+		17508368128DCBBF00888147 /* ObjCAdditions_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 17508367128DCBBF00888147 /* ObjCAdditions_Prefix.pch */; };
+		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		17508330128DCB8A00888147 /* NSDictionary+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+OAAdditions.h"; path = "../../Source/Additions/NSDictionary+OAAdditions.h"; sourceTree = SOURCE_ROOT; };
+		17508331128DCB8A00888147 /* NSDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+OAAdditions.m"; path = "../../Source/Additions/NSDictionary+OAAdditions.m"; sourceTree = SOURCE_ROOT; };
+		17508332128DCB8A00888147 /* NSMutableDictionary+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+OAAdditions.h"; path = "../../Source/Additions/NSMutableDictionary+OAAdditions.h"; sourceTree = SOURCE_ROOT; };
+		17508333128DCB8A00888147 /* NSMutableDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+OAAdditions.m"; path = "../../Source/Additions/NSMutableDictionary+OAAdditions.m"; sourceTree = SOURCE_ROOT; };
+		17508334128DCB8A00888147 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "../../Source/Additions/NSString+MD5.h"; sourceTree = SOURCE_ROOT; };
+		17508335128DCB8A00888147 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "../../Source/Additions/NSString+MD5.m"; sourceTree = SOURCE_ROOT; };
+		1750833D128DCB8A00888147 /* OATableArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OATableArrayController.h; path = ../../Source/Classes/OATableArrayController.h; sourceTree = SOURCE_ROOT; };
+		1750833E128DCB8A00888147 /* OATableArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OATableArrayController.m; path = ../../Source/Classes/OATableArrayController.m; sourceTree = SOURCE_ROOT; };
+		17508340128DCB8A00888147 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = ../../Source/Macros/SynthesizeSingleton.h; sourceTree = SOURCE_ROOT; };
+		17508367128DCBBF00888147 /* ObjCAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCAdditions_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		D2AAC07E0554694100DB518D /* libMacOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMacOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libMacOSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* MacOSX */ = {
+			isa = PBXGroup;
+			children = (
+				1750832F128DCB8A00888147 /* Additions */,
+				1750833A128DCB8A00888147 /* Classes */,
+				1750833F128DCB8A00888147 /* Macros */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = MacOSX;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E8BE07B2D77200F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1750832F128DCB8A00888147 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				17508330128DCB8A00888147 /* NSDictionary+OAAdditions.h */,
+				17508331128DCB8A00888147 /* NSDictionary+OAAdditions.m */,
+				17508332128DCB8A00888147 /* NSMutableDictionary+OAAdditions.h */,
+				17508333128DCB8A00888147 /* NSMutableDictionary+OAAdditions.m */,
+				17508334128DCB8A00888147 /* NSString+MD5.h */,
+				17508335128DCB8A00888147 /* NSString+MD5.m */,
+			);
+			name = Additions;
+			path = ../../Source/Additions;
+			sourceTree = SOURCE_ROOT;
+		};
+		1750833A128DCB8A00888147 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1750833D128DCB8A00888147 /* OATableArrayController.h */,
+				1750833E128DCB8A00888147 /* OATableArrayController.m */,
+			);
+			name = Classes;
+			path = ../../Source/Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		1750833F128DCB8A00888147 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				17508340128DCB8A00888147 /* SynthesizeSingleton.h */,
+			);
+			name = Macros;
+			path = ../../Source/Macros;
+			sourceTree = SOURCE_ROOT;
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				17508367128DCBBF00888147 /* ObjCAdditions_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17508341128DCB8A00888147 /* NSDictionary+OAAdditions.h in Headers */,
+				17508343128DCB8A00888147 /* NSMutableDictionary+OAAdditions.h in Headers */,
+				17508345128DCB8A00888147 /* NSString+MD5.h in Headers */,
+				1750834D128DCB8A00888147 /* OATableArrayController.h in Headers */,
+				1750834F128DCB8A00888147 /* SynthesizeSingleton.h in Headers */,
+				17508368128DCBBF00888147 /* ObjCAdditions_Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* MacOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "MacOSX" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacOSX;
+			productName = MacOSX;
+			productReference = D2AAC07E0554694100DB518D /* libMacOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjCAdditions-MacOSX" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* MacOSX */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* MacOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17508342128DCB8A00888147 /* NSDictionary+OAAdditions.m in Sources */,
+				17508344128DCB8A00888147 /* NSMutableDictionary+OAAdditions.m in Sources */,
+				17508346128DCB8A00888147 /* NSString+MD5.m in Sources */,
+				1750834E128DCB8A00888147 /* OATableArrayController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ObjCAdditions_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MacOSX;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MacOSX_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = MacOSX;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "MacOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjCAdditions-MacOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

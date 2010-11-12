@@ -1,5 +1,5 @@
 //
-//  NSDictionary+OAAdditions.h
+//  NSMutableDictionary.m
 //  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA
@@ -23,11 +23,18 @@
 //  THE SOFTWARE.
 //
 
-@interface NSDictionary (OAAdditions)
+#import "NSMutableDictionary+OAAdditions.h"
 
-/*
- Returns the value associated with a given key. If no value is associated with the key, returns defaultObject.
- */
-- (id)objectForKey:(id)key defaultObject:(id)defaultObject;
+
+@implementation NSMutableDictionary (OAAdditions)
+
+- (void)addMissingEntriesFromDictionary:(NSDictionary *)otherDictionary recursive:(BOOL)recursive {
+	// iterating all key from otherDictionary
+	for (NSObject *key in [otherDictionary allKeys]) {
+		if ([self objectForKey:key]) {
+			// if entry exists, then
+		}
+	}
+}
 
 @end
