@@ -20,6 +20,10 @@
 		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
+		17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */; };
+		17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */; };
+		17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */; };
+		17F6E8F8129498CD00966E3C /* NSDate+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6E8F6129498CD00966E3C /* NSDate+OAAdditions.m */; };
 		3783BC401225544600FC0B1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3783BC3F1225544600FC0B1B /* MapKit.framework */; };
 		AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
@@ -44,6 +48,11 @@
 		17508191128DC7B700888147 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		17508193128DC7B700888147 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISO8601DateFormatter.h; path = "../../Source/Support/ISO8601-parser/ISO8601DateFormatter.h"; sourceTree = SOURCE_ROOT; };
+		17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISO8601DateFormatter.m; path = "../../Source/Support/ISO8601-parser/ISO8601DateFormatter.m"; sourceTree = SOURCE_ROOT; };
+		17F6E8F2129498A300966E3C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = "../../Source/Support/ISO8601-parser/LICENSE"; sourceTree = SOURCE_ROOT; };
+		17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+OAAdditions.h"; sourceTree = "<group>"; };
+		17F6E8F6129498CD00966E3C /* NSDate+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+OAAdditions.m"; sourceTree = "<group>"; };
 		3783BC3F1225544600FC0B1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCAdditions_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +86,7 @@
 				1748323E127F7BF00073918D /* Additions */,
 				1748323D127F7BC00073918D /* Macros */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
+				17F6E8EE129498A300966E3C /* Support */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
@@ -117,6 +127,8 @@
 		1748323E127F7BF00073918D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */,
+				17F6E8F6129498CD00966E3C /* NSDate+OAAdditions.m */,
 				1711B4F01288B14D005B0066 /* NSDictionary+OAAdditions.h */,
 				1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */,
 				1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */,
@@ -151,6 +163,26 @@
 			name = "Mac OS X";
 			sourceTree = "<group>";
 		};
+		17F6E8EE129498A300966E3C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				17F6E8EF129498A300966E3C /* ISO8601-parser */,
+			);
+			name = Support;
+			path = ../../Source/Support;
+			sourceTree = SOURCE_ROOT;
+		};
+		17F6E8EF129498A300966E3C /* ISO8601-parser */ = {
+			isa = PBXGroup;
+			children = (
+				17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */,
+				17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */,
+				17F6E8F2129498A300966E3C /* LICENSE */,
+			);
+			name = "ISO8601-parser";
+			path = "../../Source/Support/ISO8601-parser";
+			sourceTree = SOURCE_ROOT;
+		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +206,8 @@
 				174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */,
 				1711B4F21288B14D005B0066 /* NSDictionary+OAAdditions.h in Headers */,
 				1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */,
+				17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */,
+				17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +267,8 @@
 				174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */,
 				1711B4F31288B14D005B0066 /* NSDictionary+OAAdditions.m in Sources */,
 				1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */,
+				17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */,
+				17F6E8F8129498CD00966E3C /* NSDate+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
