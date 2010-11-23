@@ -17,6 +17,10 @@
 	return [NSValue valueWithPoint:point];
 }
 
+- (CGPoint)CGPointValue {
+	return [self pointValue];
+}
+
 #endif
 
 @end

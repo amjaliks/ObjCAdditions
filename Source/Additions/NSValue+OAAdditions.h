@@ -18,6 +18,11 @@
  */
 + (NSValue *)valueWithCGPoint:(CGPoint)point;
 
+/**
+ Compatibillity with iOS SDK
+ */
+- (CGPoint)CGPointValue;
+
 #endif
 
 @end
