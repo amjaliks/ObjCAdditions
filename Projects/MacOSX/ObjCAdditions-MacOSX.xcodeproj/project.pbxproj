@@ -19,6 +19,8 @@
 		17508368128DCBBF00888147 /* ObjCAdditions_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 17508367128DCBBF00888147 /* ObjCAdditions_Prefix.pch */; };
 		17AC0D47129EDF340010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0D46129EDF340010FE39 /* NSDictionaryTests.m */; };
 		17AC0D4A129EE2970010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17508331128DCB8A00888147 /* NSDictionary+OAAdditions.m */; };
+		17AC0D53129EE3560010FE39 /* NSImage+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17AC0D51129EE3560010FE39 /* NSImage+OAAdditions.h */; };
+		17AC0D54129EE3560010FE39 /* NSImage+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0D52129EE3560010FE39 /* NSImage+OAAdditions.m */; };
 		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		17AC0D34129EDE8B0010FE39 /* ObjCAdditionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCAdditionsTests-Info.plist"; sourceTree = "<group>"; };
 		17AC0D45129EDF340010FE39 /* NSDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTests.h; sourceTree = "<group>"; };
 		17AC0D46129EDF340010FE39 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
+		17AC0D51129EE3560010FE39 /* NSImage+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+OAAdditions.h"; sourceTree = "<group>"; };
+		17AC0D52129EE3560010FE39 /* NSImage+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+OAAdditions.m"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libMacOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMacOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,8 @@
 			children = (
 				17508330128DCB8A00888147 /* NSDictionary+OAAdditions.h */,
 				17508331128DCB8A00888147 /* NSDictionary+OAAdditions.m */,
+				17AC0D51129EE3560010FE39 /* NSImage+OAAdditions.h */,
+				17AC0D52129EE3560010FE39 /* NSImage+OAAdditions.m */,
 				17508332128DCB8A00888147 /* NSMutableDictionary+OAAdditions.h */,
 				17508333128DCB8A00888147 /* NSMutableDictionary+OAAdditions.m */,
 				17508334128DCB8A00888147 /* NSString+MD5.h */,
@@ -186,6 +192,7 @@
 				1750834D128DCB8A00888147 /* OATableArrayController.h in Headers */,
 				1750834F128DCB8A00888147 /* SynthesizeSingleton.h in Headers */,
 				17508368128DCBBF00888147 /* ObjCAdditions_Prefix.pch in Headers */,
+				17AC0D53129EE3560010FE39 /* NSImage+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +304,7 @@
 				17508344128DCB8A00888147 /* NSMutableDictionary+OAAdditions.m in Sources */,
 				17508346128DCB8A00888147 /* NSString+MD5.m in Sources */,
 				1750834E128DCB8A00888147 /* OATableArrayController.m in Sources */,
+				17AC0D54129EE3560010FE39 /* NSImage+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
