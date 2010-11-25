@@ -17,6 +17,8 @@
 		1750834E128DCB8A00888147 /* OATableArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1750833E128DCB8A00888147 /* OATableArrayController.m */; };
 		1750834F128DCB8A00888147 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 17508340128DCB8A00888147 /* SynthesizeSingleton.h */; };
 		17508368128DCBBF00888147 /* ObjCAdditions_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 17508367128DCBBF00888147 /* ObjCAdditions_Prefix.pch */; };
+		17AC0D47129EDF340010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0D46129EDF340010FE39 /* NSDictionaryTests.m */; };
+		17AC0D4A129EE2970010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17508331128DCB8A00888147 /* NSDictionary+OAAdditions.m */; };
 		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +36,22 @@
 		1750833E128DCB8A00888147 /* OATableArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OATableArrayController.m; path = ../../Source/Classes/OATableArrayController.m; sourceTree = SOURCE_ROOT; };
 		17508340128DCB8A00888147 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = ../../Source/Macros/SynthesizeSingleton.h; sourceTree = SOURCE_ROOT; };
 		17508367128DCBBF00888147 /* ObjCAdditions_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCAdditions_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		17AC0D33129EDE8B0010FE39 /* ObjCAdditionsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjCAdditionsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17AC0D34129EDE8B0010FE39 /* ObjCAdditionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjCAdditionsTests-Info.plist"; sourceTree = "<group>"; };
+		17AC0D45129EDF340010FE39 /* NSDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTests.h; sourceTree = "<group>"; };
+		17AC0D46129EDF340010FE39 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libMacOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMacOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		17AC0D30129EDE8B0010FE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libMacOSX.a */,
+				17AC0D33129EDE8B0010FE39 /* ObjCAdditionsTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,9 +78,11 @@
 				1750832F128DCB8A00888147 /* Additions */,
 				1750833A128DCB8A00888147 /* Classes */,
 				1750833F128DCB8A00888147 /* Macros */,
+				17AC0D42129EDECB0010FE39 /* Tests */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				17AC0D34129EDE8B0010FE39 /* ObjCAdditionsTests-Info.plist */,
 			);
 			name = MacOSX;
 			sourceTree = "<group>";
@@ -131,6 +147,24 @@
 			path = ../../Source/Macros;
 			sourceTree = SOURCE_ROOT;
 		};
+		17AC0D42129EDECB0010FE39 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				17AC0D44129EDF030010FE39 /* Additions */,
+			);
+			name = Tests;
+			path = ../../Source/Tests;
+			sourceTree = "<group>";
+		};
+		17AC0D44129EDF030010FE39 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				17AC0D45129EDF340010FE39 /* NSDictionaryTests.h */,
+				17AC0D46129EDF340010FE39 /* NSDictionaryTests.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +192,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		17AC0D32129EDE8B0010FE39 /* MacOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17AC0D38129EDE8C0010FE39 /* Build configuration list for PBXNativeTarget "MacOSXTests" */;
+			buildPhases = (
+				17AC0D2E129EDE8B0010FE39 /* Resources */,
+				17AC0D2F129EDE8B0010FE39 /* Sources */,
+				17AC0D30129EDE8B0010FE39 /* Frameworks */,
+				17AC0D31129EDE8B0010FE39 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacOSXTests;
+			productName = ObjCAdditionsTests;
+			productReference = 17AC0D33129EDE8B0010FE39 /* ObjCAdditionsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D2AAC07D0554694100DB518D /* MacOSX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "MacOSX" */;
@@ -196,11 +248,47 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* MacOSX */,
+				17AC0D32129EDE8B0010FE39 /* MacOSXTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		17AC0D2E129EDE8B0010FE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17AC0D31129EDE8B0010FE39 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		17AC0D2F129EDE8B0010FE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AC0D47129EDF340010FE39 /* NSDictionaryTests.m in Sources */,
+				17AC0D4A129EE2970010FE39 /* NSDictionary+OAAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +303,60 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		17AC0D36129EDE8C0010FE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "ObjCAdditionsTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ObjCAdditionsTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		17AC0D37129EDE8C0010FE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "ObjCAdditionsTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ObjCAdditionsTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,6 +418,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		17AC0D38129EDE8C0010FE39 /* Build configuration list for PBXNativeTarget "MacOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17AC0D36129EDE8C0010FE39 /* Debug */,
+				17AC0D37129EDE8C0010FE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "MacOSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
