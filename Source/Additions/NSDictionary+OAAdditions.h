@@ -23,11 +23,17 @@
 //  THE SOFTWARE.
 //
 
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+
 @interface NSDictionary (OAAdditions)
 
-/*
- Returns the value associated with a given key. If no value is associated with the key, returns defaultObject.
+/* Returns the value associated with a given key. If no value is associated with the key, returns defaultObject.
  */
 - (id)objectForKey:(id)key defaultObject:(id)defaultObject;
+
+/* Creates CGSize struct from value with keys 'width' and 'height'.
+ */
+- (CGSize)CGSizeValue;
 
 @end

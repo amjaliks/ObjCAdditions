@@ -38,4 +38,11 @@
 	}
 }
 
+- (CGSize)CGSizeValue {
+	CGSize size;
+	size.width = [[self valueForKey:@"width"] floatValue];
+	size.height = [[self valueForKey:@"height"] floatValue];
+	return size;
+}
+
 @end

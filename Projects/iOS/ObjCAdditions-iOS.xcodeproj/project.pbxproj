@@ -20,6 +20,9 @@
 		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
+		17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */; };
+		17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
+		17AC0E94129F2A170010FE39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AC0E93129F2A170010FE39 /* CoreGraphics.framework */; };
 		17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */; };
 		17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */; };
 		17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */; };
@@ -44,10 +47,12 @@
 		174832FA127FF5850073918D /* UIDevice+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OAAdditions.m"; sourceTree = "<group>"; };
 		17507F26128DC48B00888147 /* OATableArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATableArrayController.h; sourceTree = "<group>"; };
 		17507F27128DC48B00888147 /* OATableArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATableArrayController.m; sourceTree = "<group>"; };
-		1750818F128DC7B700888147 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
-		17508191128DC7B700888147 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		17508193128DC7B700888147 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		17AC0DFD129F225C0010FE39 /* iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17AC0DFE129F225C0010FE39 /* iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSTests-Info.plist"; sourceTree = "<group>"; };
+		17AC0E05129F227E0010FE39 /* NSDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTests.h; sourceTree = "<group>"; };
+		17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
+		17AC0E93129F2A170010FE39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISO8601DateFormatter.h; path = "../../Source/Support/ISO8601-parser/ISO8601DateFormatter.h"; sourceTree = SOURCE_ROOT; };
 		17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISO8601DateFormatter.m; path = "../../Source/Support/ISO8601-parser/ISO8601DateFormatter.m"; sourceTree = SOURCE_ROOT; };
 		17F6E8F2129498A300966E3C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = "../../Source/Support/ISO8601-parser/LICENSE"; sourceTree = SOURCE_ROOT; };
@@ -60,6 +65,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		17AC0DFA129F225C0010FE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AC0E94129F2A170010FE39 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libobjcadd.a */,
+				17AC0DFD129F225C0010FE39 /* iOSTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,9 +101,11 @@
 				1748323D127F7BC00073918D /* Macros */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				17F6E8EE129498A300966E3C /* Support */,
+				17AC0E03129F227E0010FE39 /* Tests */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				17AC0DFE129F225C0010FE39 /* iOSTests-Info.plist */,
 			);
 			name = ObjCAdditions;
 			sourceTree = "<group>";
@@ -97,8 +113,9 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				17508123128DC77100888147 /* iOS */,
-				1750818E128DC79C00888147 /* Mac OS X */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				3783BC3F1225544600FC0B1B /* MapKit.framework */,
+				17AC0E93129F2A170010FE39 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,23 +161,22 @@
 			path = ../../Source/Additions;
 			sourceTree = "<group>";
 		};
-		17508123128DC77100888147 /* iOS */ = {
+		17AC0E03129F227E0010FE39 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
-				3783BC3F1225544600FC0B1B /* MapKit.framework */,
+				17AC0E04129F227E0010FE39 /* Additions */,
 			);
-			name = iOS;
+			name = Tests;
+			path = ../../Source/Tests;
 			sourceTree = "<group>";
 		};
-		1750818E128DC79C00888147 /* Mac OS X */ = {
+		17AC0E04129F227E0010FE39 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
-				1750818F128DC7B700888147 /* AppKit.framework */,
-				17508191128DC7B700888147 /* Cocoa.framework */,
-				17508193128DC7B700888147 /* Foundation.framework */,
+				17AC0E05129F227E0010FE39 /* NSDictionaryTests.h */,
+				17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */,
 			);
-			name = "Mac OS X";
+			path = Additions;
 			sourceTree = "<group>";
 		};
 		17F6E8EE129498A300966E3C /* Support */ = {
@@ -214,6 +230,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		17AC0DFC129F225C0010FE39 /* iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17AC0E02129F225C0010FE39 /* Build configuration list for PBXNativeTarget "iOSTests" */;
+			buildPhases = (
+				17AC0DF8129F225C0010FE39 /* Resources */,
+				17AC0DF9129F225C0010FE39 /* Sources */,
+				17AC0DFA129F225C0010FE39 /* Frameworks */,
+				17AC0DFB129F225C0010FE39 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSTests;
+			productName = iOSTests;
+			productReference = 17AC0DFD129F225C0010FE39 /* iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D2AAC07D0554694100DB518D /* iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "iOS" */;
@@ -252,11 +286,47 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* iOS */,
+				17AC0DFC129F225C0010FE39 /* iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		17AC0DF8129F225C0010FE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17AC0DFB129F225C0010FE39 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		17AC0DF9129F225C0010FE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */,
+				17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +345,66 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		17AC0E00129F225C0010FE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "iOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = iOSTests;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		17AC0E01129F225C0010FE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "iOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = iOSTests;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -337,6 +467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		17AC0E02129F225C0010FE39 /* Build configuration list for PBXNativeTarget "iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17AC0E00129F225C0010FE39 /* Debug */,
+				17AC0E01129F225C0010FE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

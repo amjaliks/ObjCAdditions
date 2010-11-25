@@ -1,6 +1,6 @@
 //
 //  NSDictionaryTests.m
-//  ObjCAdditions-MacOSX
+//  ObjCAdditions
 //
 //  Copyright (c) 2010 A25 SIA
 //  
@@ -32,6 +32,13 @@
 	NSDictionary *dictionary = [NSDictionary dictionaryWithObject:@"testvalue" forKey:@"testkey"];
 	STAssertEqualObjects([dictionary objectForKey:@"testkey" defaultObject:@"othervalue"], @"testvalue", nil);
 	STAssertEqualObjects([dictionary objectForKey:@"otherkey" defaultObject:@"othervalue"], @"othervalue", nil);
+}
+
+- (void)testCGSizeValue {
+	NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+								[NSNumber numberWithFloat:1.0f], @"width",
+								[NSNumber numberWithFloat:2.0f], @"height", nil];
+	STAssertTrue(CGSizeEqualToSize([dictionary CGSizeValue], CGSizeMake(1.0f, 2.0f)), nil);
 }
 
 @end
