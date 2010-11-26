@@ -24,15 +24,30 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE == 1
 #import <CoreGraphics/CoreGraphics.h>
+#endif
 
 @interface NSDictionary (OAAdditions)
+
+/* Creates dictionary with value with keys 'x' and 'y' from CGPoint struct.
+ */
++ (NSDictionary *)dictionaryWithCGPointValue:(CGPoint)point;
+
+/* Creates dictionary with value with keys 'width' and 'height' from CGSize struct.
+ */
++ (NSDictionary *)dictionaryWithCGSizeValue:(CGSize)size;
 
 /* Returns the value associated with a given key. If no value is associated with the key, returns defaultObject.
  */
 - (id)objectForKey:(id)key defaultObject:(id)defaultObject;
 
-/* Creates CGSize struct from value with keys 'width' and 'height'.
+/* Creates CGPoint struct from values with keys 'x' and 'y'.
+ */
+- (CGPoint)CGPointValue;
+
+/* Creates CGSize struct from values with keys 'width' and 'height'.
  */
 - (CGSize)CGSizeValue;
 

@@ -28,6 +28,19 @@
 
 @implementation NSDictionary (OAAdditions)
 
++ (NSDictionary *)dictionaryWithCGPointValue:(CGPoint)point {
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+			[NSNumber numberWithFloat:point.x], @"x",
+			[NSNumber numberWithFloat:point.y], @"y", nil];
+}
+
++ (NSDictionary *)dictionaryWithCGSizeValue:(CGSize)size {
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+			[NSNumber numberWithFloat:size.width], @"width",
+			[NSNumber numberWithFloat:size.height], @"height", nil];
+}
+
+
 - (id)objectForKey:(id)key defaultObject:(id)defaultObject {
 	id object = [self objectForKey:key];
 	
@@ -36,6 +49,13 @@
 	} else {
 		return defaultObject;
 	}
+}
+
+- (CGPoint)CGPointValue {
+	CGPoint point;
+	point.x = [[self valueForKey:@"x"] floatValue];
+	point.y = [[self valueForKey:@"y"] floatValue];
+	return point;
 }
 
 - (CGSize)CGSizeValue {

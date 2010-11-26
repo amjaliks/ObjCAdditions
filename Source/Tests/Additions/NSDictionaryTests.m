@@ -28,10 +28,29 @@
 
 @implementation NSDictionaryTests
 
+- (void)testDictionaryWithCGPointValue {
+	NSDictionary *dictionary = [NSDictionary dictionaryWithCGPointValue:CGPointMake(1.0f, 2.0f)];
+	STAssertEqualObjects([dictionary valueForKey:@"x"], [NSNumber numberWithFloat:1.0f], nil);
+	STAssertEqualObjects([dictionary valueForKey:@"y"], [NSNumber numberWithFloat:2.0f], nil);
+}
+
+- (void)testDictionaryWithCGSizeValue {
+	NSDictionary *dictionary = [NSDictionary dictionaryWithCGSizeValue:CGSizeMake(1.0f, 2.0f)];
+	STAssertEqualObjects([dictionary valueForKey:@"width"], [NSNumber numberWithFloat:1.0f], nil);
+	STAssertEqualObjects([dictionary valueForKey:@"height"], [NSNumber numberWithFloat:2.0f], nil);
+}
+
 - (void)testObjectForKeyDefaultObject {
 	NSDictionary *dictionary = [NSDictionary dictionaryWithObject:@"testvalue" forKey:@"testkey"];
 	STAssertEqualObjects([dictionary objectForKey:@"testkey" defaultObject:@"othervalue"], @"testvalue", nil);
 	STAssertEqualObjects([dictionary objectForKey:@"otherkey" defaultObject:@"othervalue"], @"othervalue", nil);
+}
+
+- (void)testCGPointValue {
+	NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+								[NSNumber numberWithFloat:1.0f], @"x",
+								[NSNumber numberWithFloat:2.0f], @"y", nil];
+	STAssertTrue(CGPointEqualToPoint([dictionary CGPointValue], CGPointMake(1.0f, 2.0f)), nil);
 }
 
 - (void)testCGSizeValue {
