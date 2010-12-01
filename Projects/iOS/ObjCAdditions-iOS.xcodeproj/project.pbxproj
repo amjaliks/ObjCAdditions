@@ -11,6 +11,7 @@
 		1711B4F31288B14D005B0066 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
 		1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */; };
 		1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */; };
+		17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */; };
 		17483240127F7C250073918D /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 1748323F127F7C250073918D /* NSString+MD5.h */; };
 		17483244127F7C340073918D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483241127F7C340073918D /* NSString+MD5.m */; };
 		17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */; };
@@ -37,6 +38,8 @@
 		1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+OAAdditions.m"; sourceTree = "<group>"; };
 		1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+OAAdditions.h"; sourceTree = "<group>"; };
 		1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+OAAdditions.m"; sourceTree = "<group>"; };
+		17130B2E12A6F370005379C2 /* NSArray+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OAAdditions.h"; sourceTree = "<group>"; };
+		17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OAAdditions.m"; sourceTree = "<group>"; };
 		1748323F127F7C250073918D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		17483241127F7C340073918D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+OAAdditions.h"; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 		1748323E127F7BF00073918D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				17130B2E12A6F370005379C2 /* NSArray+OAAdditions.h */,
+				17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */,
 				17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */,
 				17F6E8F6129498CD00966E3C /* NSDate+OAAdditions.m */,
 				1711B4F01288B14D005B0066 /* NSDictionary+OAAdditions.h */,
@@ -339,6 +344,7 @@
 				1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */,
 				17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */,
 				17F6E8F8129498CD00966E3C /* NSDate+OAAdditions.m in Sources */,
+				17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
