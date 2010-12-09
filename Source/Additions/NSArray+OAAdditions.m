@@ -29,7 +29,12 @@
 @implementation NSArray (OAAdditions)
 
 - (id)randomObject {
-	return [self objectAtIndex:arc4random() % [self count]];
+	NSUInteger count = [self count];
+	if (count) {
+		return [self objectAtIndex:arc4random() % count];
+	} else {
+		return nil;
+	}
 }
 
 @end
