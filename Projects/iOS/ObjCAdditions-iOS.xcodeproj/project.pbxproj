@@ -20,13 +20,15 @@
 		1748326C127F7F550073918D /* OANetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748326A127F7F550073918D /* OANetworkActivityIndicator.m */; };
 		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
+		1758AC5A12CD2559006C4F86 /* OASoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1758AC5912CD2559006C4F86 /* OASoundManager.m */; };
+		1758AC5B12CD2559006C4F86 /* OASoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1758AC5812CD2559006C4F86 /* OASoundManager.h */; };
+		1758AC5C12CD2559006C4F86 /* OASoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1758AC5912CD2559006C4F86 /* OASoundManager.m */; };
+		1758AC5F12CD2781006C4F86 /* OASound.h in Headers */ = {isa = PBXBuildFile; fileRef = 1758AC5D12CD2781006C4F86 /* OASound.h */; };
+		1758AC6012CD2781006C4F86 /* OASound.m in Sources */ = {isa = PBXBuildFile; fileRef = 1758AC5E12CD2781006C4F86 /* OASound.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
 		17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */; };
 		17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
 		17AC0E94129F2A170010FE39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AC0E93129F2A170010FE39 /* CoreGraphics.framework */; };
-		17BB2AC912BC205700945E14 /* OAAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BB2AC812BC205700945E14 /* OAAudioPlayer.m */; };
-		17BB2ACA12BC205700945E14 /* OAAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BB2AC712BC205700945E14 /* OAAudioPlayer.h */; };
-		17BB2ACB12BC205700945E14 /* OAAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BB2AC812BC205700945E14 /* OAAudioPlayer.m */; };
 		17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */; };
 		17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */; };
 		17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */; };
@@ -53,14 +55,16 @@
 		174832FA127FF5850073918D /* UIDevice+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OAAdditions.m"; sourceTree = "<group>"; };
 		17507F26128DC48B00888147 /* OATableArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATableArrayController.h; sourceTree = "<group>"; };
 		17507F27128DC48B00888147 /* OATableArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATableArrayController.m; sourceTree = "<group>"; };
+		1758AC5812CD2559006C4F86 /* OASoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASoundManager.h; sourceTree = "<group>"; };
+		1758AC5912CD2559006C4F86 /* OASoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OASoundManager.m; sourceTree = "<group>"; };
+		1758AC5D12CD2781006C4F86 /* OASound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASound.h; sourceTree = "<group>"; };
+		1758AC5E12CD2781006C4F86 /* OASound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OASound.m; sourceTree = "<group>"; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		17AC0DFD129F225C0010FE39 /* iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AC0DFE129F225C0010FE39 /* iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSTests-Info.plist"; sourceTree = "<group>"; };
 		17AC0E05129F227E0010FE39 /* NSDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTests.h; sourceTree = "<group>"; };
 		17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
 		17AC0E93129F2A170010FE39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		17BB2AC712BC205700945E14 /* OAAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAudioPlayer.h; sourceTree = "<group>"; };
-		17BB2AC812BC205700945E14 /* OAAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAudioPlayer.m; sourceTree = "<group>"; };
 		17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISO8601DateFormatter.h; path = "../../Source/Support/ISO8601-parser/ISO8601DateFormatter.h"; sourceTree = SOURCE_ROOT; };
 		17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISO8601DateFormatter.m; path = "../../Source/Support/ISO8601-parser/ISO8601DateFormatter.m"; sourceTree = SOURCE_ROOT; };
 		17F6E8F2129498A300966E3C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = "../../Source/Support/ISO8601-parser/LICENSE"; sourceTree = SOURCE_ROOT; };
@@ -131,8 +135,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				17BB2AC712BC205700945E14 /* OAAudioPlayer.h */,
-				17BB2AC812BC205700945E14 /* OAAudioPlayer.m */,
+				1758AC5712CD24F9006C4F86 /* Sound Manager */,
 				17483269127F7F550073918D /* OANetworkActivityIndicator.h */,
 				1748326A127F7F550073918D /* OANetworkActivityIndicator.m */,
 				17507F26128DC48B00888147 /* OATableArrayController.h */,
@@ -171,6 +174,17 @@
 			);
 			name = Additions;
 			path = ../../Source/Additions;
+			sourceTree = "<group>";
+		};
+		1758AC5712CD24F9006C4F86 /* Sound Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1758AC5D12CD2781006C4F86 /* OASound.h */,
+				1758AC5E12CD2781006C4F86 /* OASound.m */,
+				1758AC5812CD2559006C4F86 /* OASoundManager.h */,
+				1758AC5912CD2559006C4F86 /* OASoundManager.m */,
+			);
+			path = "Sound Manager";
 			sourceTree = "<group>";
 		};
 		17AC0E03129F227E0010FE39 /* Tests */ = {
@@ -236,7 +250,8 @@
 				1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */,
 				17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */,
 				17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */,
-				17BB2ACA12BC205700945E14 /* OAAudioPlayer.h in Headers */,
+				1758AC5B12CD2559006C4F86 /* OASoundManager.h in Headers */,
+				1758AC5F12CD2781006C4F86 /* OASound.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +352,7 @@
 			files = (
 				17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */,
 				17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */,
-				17BB2AC912BC205700945E14 /* OAAudioPlayer.m in Sources */,
+				1758AC5A12CD2559006C4F86 /* OASoundManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +369,8 @@
 				17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */,
 				17F6E8F8129498CD00966E3C /* NSDate+OAAdditions.m in Sources */,
 				17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */,
-				17BB2ACB12BC205700945E14 /* OAAudioPlayer.m in Sources */,
+				1758AC5C12CD2559006C4F86 /* OASoundManager.m in Sources */,
+				1758AC6012CD2781006C4F86 /* OASound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
