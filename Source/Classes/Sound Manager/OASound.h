@@ -9,10 +9,27 @@
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
-enum {
+enum OASoundType{
 	OASystemSound,
 	OAAudioQueue
-} typedef OASoundType;
+};
+typedef enum OASoundType OASoundType;
+
+#define kNumberBuffers 3
+
+struct AQPlayerState {
+	AudioStreamBasicDescription mDataFormat;
+    AudioQueueRef mQueue;
+    AudioQueueBufferRef mBuffers[kNumberBuffers];
+    AudioFileID mAudioFile;
+    UInt32 bufferByteSize;
+    SInt64 mCurrentPacket;
+    UInt32 mNumPacketsToRead;
+    AudioStreamPacketDescription *mPacketDescs;
+    bool mIsDone;
+	UInt32 mIsRunning;
+};
+typedef struct AQPlayerState AQPlayerState;
 
 
 @interface OASound : NSObject {
@@ -20,12 +37,14 @@ enum {
 	NSString *name;
 	
 	SystemSoundID systemSoundID;
+	AQPlayerState aqData;
 }
 
 @property (nonatomic) OASoundType type;
 @property (nonatomic, retain) NSString *name;
 
 @property (nonatomic) SystemSoundID systemSoundID;
+@property (nonatomic) AQPlayerState aqData;
 
 - (id)initWithType:(OASoundType)type name:(NSString *)name;
 

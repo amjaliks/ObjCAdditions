@@ -15,6 +15,7 @@
 @synthesize name;
 
 @synthesize systemSoundID;
+@synthesize aqData;
 
 - (id)initWithType:(OASoundType)newType name:(NSString *)newName {
 	self = [self init];
