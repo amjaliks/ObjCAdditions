@@ -1,5 +1,5 @@
 //
-//  OASoundManager.h
+//  CGGeometry+OAAdditions.h
 //  ObjCAdditions
 //
 //  Copyright (c) 2011 A25 SIA
@@ -23,23 +23,9 @@
 //  THE SOFTWARE.
 //
 
+
 #import <Foundation/Foundation.h>
-#import <AudioToolbox/AudioToolbox.h>
+#import <CoreGraphics/CoreGraphics.h>
 
-@interface OASoundManager : NSObject {
-	NSUInteger nextSoundID;
-	NSMutableDictionary *sounds;
-}
-
-+ (OASoundManager *)defaultManager;
-
-- (NSNumber *)registerSystemSound:(NSString *)name;
-- (NSNumber *)registerAudioQueue:(NSString *)name;
-
-- (void)playSound:(NSNumber *)soundID;
-
-void AudioQueueCallback(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer);
-void AudioQueueRunningCallback(void *aqData, AudioQueueRef inAQ, AudioQueuePropertyID inID);
-void DeriveBufferSize (AudioStreamBasicDescription *ASBDesc, UInt32 maxPacketSize, Float64 seconds, UInt32 *outBufferSize, UInt32 *outNumPacketsToRead);
-
-@end
+CGRect CGRectCentredInRect(CGRect a, CGRect b, BOOL round);
+CGRect CGRectBottom(CGRect a, CGFloat b);

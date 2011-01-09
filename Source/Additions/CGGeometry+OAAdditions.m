@@ -1,5 +1,5 @@
 //
-//  OASoundManager.h
+//  CGGeometry+OAAdditions.m
 //  ObjCAdditions
 //
 //  Copyright (c) 2011 A25 SIA
@@ -23,23 +23,25 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <AudioToolbox/AudioToolbox.h>
 
-@interface OASoundManager : NSObject {
-	NSUInteger nextSoundID;
-	NSMutableDictionary *sounds;
+#import "CGGeometry+OAAdditions.h"
+
+CGRect CGRectCentredInRect(CGRect a, CGRect b, BOOL floor) {
+	a.origin.x = b.origin.x + (b.size.width - a.size.width) / 2.0f;
+	a.origin.y = b.origin.y + (b.size.height - a.size.height) / 2.0f;
+	
+	if (floor) {
+		a.origin.x = floorf(a.origin.x);
+		a.origin.y = floorf(a.origin.y);
+	}
+	
+	return a;
 }
 
-+ (OASoundManager *)defaultManager;
-
-- (NSNumber *)registerSystemSound:(NSString *)name;
-- (NSNumber *)registerAudioQueue:(NSString *)name;
-
-- (void)playSound:(NSNumber *)soundID;
-
-void AudioQueueCallback(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer);
-void AudioQueueRunningCallback(void *aqData, AudioQueueRef inAQ, AudioQueuePropertyID inID);
-void DeriveBufferSize (AudioStreamBasicDescription *ASBDesc, UInt32 maxPacketSize, Float64 seconds, UInt32 *outBufferSize, UInt32 *outNumPacketsToRead);
-
-@end
+CGRect CGRectBottom(CGRect a, CGFloat b) {
+	CGFloat dy = a.size.height - b;
+	a.origin.y += dy;
+	a.size.height = b;
+	
+	return a;
+}

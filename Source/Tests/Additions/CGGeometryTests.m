@@ -1,5 +1,5 @@
 //
-//  OASoundManager.h
+//  CGGeometryTests.m
 //  ObjCAdditions
 //
 //  Copyright (c) 2011 A25 SIA
@@ -23,23 +23,21 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <AudioToolbox/AudioToolbox.h>
+#import "CGGeometryTests.h"
+#import "CGGeometry+OAAdditions.h"
 
-@interface OASoundManager : NSObject {
-	NSUInteger nextSoundID;
-	NSMutableDictionary *sounds;
+@implementation CGGeometryTests
+
+- (void)testRectBottom {
+	CGRect rect1 = CGRectBottom(CGRectMake(0.0f, 0.0f, 75.0f, 68.0f), 14.0f);
+	CGRect rect2 = CGRectMake(0.0f, 54.0f, 75.0f, 14.0f);
+	STAssertEquals(rect1, rect2, nil);
 }
 
-+ (OASoundManager *)defaultManager;
-
-- (NSNumber *)registerSystemSound:(NSString *)name;
-- (NSNumber *)registerAudioQueue:(NSString *)name;
-
-- (void)playSound:(NSNumber *)soundID;
-
-void AudioQueueCallback(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer);
-void AudioQueueRunningCallback(void *aqData, AudioQueueRef inAQ, AudioQueuePropertyID inID);
-void DeriveBufferSize (AudioStreamBasicDescription *ASBDesc, UInt32 maxPacketSize, Float64 seconds, UInt32 *outBufferSize, UInt32 *outNumPacketsToRead);
+- (void)testRectCentredInRect {
+	CGRect rect1 = CGRectCentredInRect(CGRectMake(0.0f, 0.0f, 62.0f, 9.0f), CGRectMake(0.0f, 54.0f, 75.0f, 14.0f), YES);
+	CGRect rect2 = CGRectMake(6.0f, 56.0f, 62.0f, 9.0f);
+	STAssertEquals(rect1, rect2, nil);
+}
 
 @end
