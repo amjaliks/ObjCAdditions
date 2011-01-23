@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
-enum OASoundType{
+enum OASoundType {
 	OASystemSound,
 	OAAudioQueue
 };
