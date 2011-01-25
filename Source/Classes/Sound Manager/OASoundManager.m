@@ -29,12 +29,30 @@
 
 @implementation OASoundManager
 
+- (NSURL *)URLForSoundNamed:(NSString *)name {
+	static NSString *extensions[] = { @"caf", @"m4a" };
+	static NSUInteger extensionCount = 2;
+	
+	for (NSUInteger i = 0; i < extensionCount; i++) {
+		NSURL *URL = [self URLFOrSoundNamed:name withExtension:extensions[i]];
+		if (URL) {
+			return URL;
+		}
+	}
+	
+	return nil;
+}
+
+- (NSURL *)URLFOrSoundNamed:(NSString *)name withExtension:(NSString *)ext {
+	return [[NSBundle mainBundle] URLForResource:name withExtension:ext];
+}
+
 - (NSNumber *)registerSystemSound:(NSString *)name {
 	// create sound handler
 	OASound *sound = [[OASound alloc] initWithType:OASystemSound name:name];
 	
 	// URL for sound file
-	NSURL *soundURL = [[NSBundle mainBundle] URLForResource:name withExtension:@"caf"];
+	NSURL *soundURL = [self URLForSoundNamed:name];
 	CFURLRef soundURLRef = (CFURLRef) soundURL;
 	SystemSoundID systemSoundID;
 	
@@ -51,12 +69,39 @@
 	return soundID;
 }
 
+- (NSNumber *)registerAudioPlayer:(NSString *)name {
+	// create sound handler
+	OASound *sound = [[OASound alloc] initWithType:OAAudioPlayer name:name];
+	
+	// URL for sound file
+	NSURL *soundURL = [self URLForSoundNamed:name];
+	
+	// create audio player
+	NSError *error = nil;
+	sound.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:&error];
+	
+	if (sound.audioPlayer) {
+		// prepare player
+		[sound.audioPlayer prepareToPlay];
+		
+		// assing sound ID
+		NSNumber *soundID = [NSNumber numberWithUnsignedInteger:nextSoundID++];
+		
+		// save sound in cache
+		[sounds setObject:sound forKey:soundID];
+		
+		return soundID;
+	} else {
+		return nil;
+	}
+}
+
 - (NSNumber *)registerAudioQueue:(NSString *)name {
 	// create sound handler
 	OASound *sound = [[OASound alloc] initWithType:OAAudioQueue name:name];
 
 	// URL for sound file
-	NSURL *soundURL = [[NSBundle mainBundle] URLForResource:name withExtension:@"caf"];
+	NSURL *soundURL = [self URLForSoundNamed:name];
 	CFURLRef soundURLRef = (CFURLRef)soundURL;
 
 	// open audio file
@@ -90,10 +135,20 @@
 }
 
 - (void)playSound:(NSNumber *)soundID {
+	[self playSound:soundID numberOfLoops:0];
+}
+
+- (void)playSound:(NSNumber *)soundID numberOfLoops:(NSInteger)numberOfLoops {
 	OASound *sound = [sounds objectForKey:soundID];
 	
 	if (sound.type == OASystemSound) {
 		AudioServicesPlaySystemSound(sound.systemSoundID);
+	} else if (sound.type == OAAudioPlayer) {
+		sound.audioPlayer.numberOfLoops = numberOfLoops;
+		if (!sound.audioPlayer.playing) {
+			sound.audioPlayer.currentTime = 0;
+			[sound.audioPlayer play];
+		}
 	} else if (sound.type == OAAudioQueue) {
 		AQPlayerState *pAqData = calloc(1, sizeof(AQPlayerState));
 		*pAqData = sound.aqData;
@@ -107,6 +162,13 @@
 		AudioQueueAddPropertyListener(pAqData->mQueue, kAudioQueueProperty_IsRunning, AudioQueueRunningCallback, pAqData);
 		
 		AudioQueueStart(pAqData->mQueue, nil);
+	}
+}
+
+- (void)stopSound:(NSNumber *)soundID {
+	OASound *sound = [sounds objectForKey:soundID];
+	if (sound.type == OAAudioPlayer) {
+		[sound.audioPlayer stop];
 	}
 }
 

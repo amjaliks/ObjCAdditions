@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 enum OASoundType {
 	OASystemSound,
+	OAAudioPlayer,
 	OAAudioQueue
 };
 typedef enum OASoundType OASoundType;
@@ -37,6 +39,7 @@ typedef struct AQPlayerState AQPlayerState;
 	NSString *name;
 	
 	SystemSoundID systemSoundID;
+	AVAudioPlayer *audioPlayer;
 	AQPlayerState aqData;
 }
 
@@ -44,6 +47,7 @@ typedef struct AQPlayerState AQPlayerState;
 @property (nonatomic, retain) NSString *name;
 
 @property (nonatomic) SystemSoundID systemSoundID;
+@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 @property (nonatomic) AQPlayerState aqData;
 
 - (id)initWithType:(OASoundType)type name:(NSString *)name;

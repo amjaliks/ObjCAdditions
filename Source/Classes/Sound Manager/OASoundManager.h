@@ -33,10 +33,16 @@
 
 + (OASoundManager *)defaultManager;
 
+- (NSURL *)URLForSoundNamed:(NSString *)name;
+- (NSURL *)URLFOrSoundNamed:(NSString *)name withExtension:(NSString *)ext;
 - (NSNumber *)registerSystemSound:(NSString *)name;
+- (NSNumber *)registerAudioPlayer:(NSString *)name;
 - (NSNumber *)registerAudioQueue:(NSString *)name;
 
 - (void)playSound:(NSNumber *)soundID;
+- (void)playSound:(NSNumber *)soundID numberOfLoops:(NSInteger)numberOfLoops;
+
+- (void)stopSound:(NSNumber *)soundID;
 
 void AudioQueueCallback(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer);
 void AudioQueueRunningCallback(void *aqData, AudioQueueRef inAQ, AudioQueuePropertyID inID);
