@@ -25,6 +25,8 @@
 		1758AC5F12CD2781006C4F86 /* OASound.h in Headers */ = {isa = PBXBuildFile; fileRef = 1758AC5D12CD2781006C4F86 /* OASound.h */; };
 		1758AC6012CD2781006C4F86 /* OASound.m in Sources */ = {isa = PBXBuildFile; fileRef = 1758AC5E12CD2781006C4F86 /* OASound.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
+		179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D7A4C130C8B2300E41304 /* OACalloutView.h */; };
+		179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179D7A4D130C8B2300E41304 /* OACalloutView.m */; };
 		17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */; };
 		17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
 		17AC0E94129F2A170010FE39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AC0E93129F2A170010FE39 /* CoreGraphics.framework */; };
@@ -63,6 +65,8 @@
 		1758AC5D12CD2781006C4F86 /* OASound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASound.h; sourceTree = "<group>"; };
 		1758AC5E12CD2781006C4F86 /* OASound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OASound.m; sourceTree = "<group>"; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		179D7A4C130C8B2300E41304 /* OACalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACalloutView.h; sourceTree = "<group>"; };
+		179D7A4D130C8B2300E41304 /* OACalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACalloutView.m; sourceTree = "<group>"; };
 		17AC0DFD129F225C0010FE39 /* iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AC0DFE129F225C0010FE39 /* iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSTests-Info.plist"; sourceTree = "<group>"; };
 		17AC0E05129F227E0010FE39 /* NSDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTests.h; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				179D7A4B130C8AA100E41304 /* Callout View */,
 				1758AC5712CD24F9006C4F86 /* Sound Manager */,
 				17483269127F7F550073918D /* OANetworkActivityIndicator.h */,
 				1748326A127F7F550073918D /* OANetworkActivityIndicator.m */,
@@ -194,6 +199,15 @@
 				1758AC5912CD2559006C4F86 /* OASoundManager.m */,
 			);
 			path = "Sound Manager";
+			sourceTree = "<group>";
+		};
+		179D7A4B130C8AA100E41304 /* Callout View */ = {
+			isa = PBXGroup;
+			children = (
+				179D7A4C130C8B2300E41304 /* OACalloutView.h */,
+				179D7A4D130C8B2300E41304 /* OACalloutView.m */,
+			);
+			path = "Callout View";
 			sourceTree = "<group>";
 		};
 		17AC0E03129F227E0010FE39 /* Tests */ = {
@@ -264,6 +278,7 @@
 				1758AC5B12CD2559006C4F86 /* OASoundManager.h in Headers */,
 				1758AC5F12CD2781006C4F86 /* OASound.h in Headers */,
 				17CD77F812DA327F0023B633 /* CGGeometry+OAAdditions.h in Headers */,
+				179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +400,7 @@
 				1758AC5C12CD2559006C4F86 /* OASoundManager.m in Sources */,
 				1758AC6012CD2781006C4F86 /* OASound.m in Sources */,
 				17CD77F912DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */,
+				179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
