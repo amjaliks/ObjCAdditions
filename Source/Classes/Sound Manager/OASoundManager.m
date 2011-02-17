@@ -114,9 +114,9 @@
 	
 	// determine buffer size
 	UInt32 maxPacketSize;
-	UInt32 propertySize = sizeof (maxPacketSize);
+	UInt32 propertySize = sizeof(maxPacketSize);
 	AudioFileGetProperty(aqData.mAudioFile, kAudioFilePropertyPacketSizeUpperBound, &propertySize, &maxPacketSize);
-	DeriveBufferSize(&aqData.mDataFormat, maxPacketSize, 1, &aqData.bufferByteSize, &aqData.mNumPacketsToRead);
+	DeriveBufferSize(&aqData.mDataFormat, maxPacketSize, 0.1, &aqData.bufferByteSize, &aqData.mNumPacketsToRead);
 	
 	// default values
 	aqData.mIsDone = NO;
@@ -153,7 +153,7 @@
 		AQPlayerState *pAqData = calloc(1, sizeof(AQPlayerState));
 		*pAqData = sound.aqData;
 		
-		AudioQueueNewOutput(&pAqData->mDataFormat, AudioQueueCallback, &pAqData, CFRunLoopGetCurrent(), kCFRunLoopCommonModes, 0, &pAqData->mQueue);
+		AudioQueueNewOutput(&pAqData->mDataFormat, AudioQueueCallback, pAqData, CFRunLoopGetCurrent(), kCFRunLoopCommonModes, 0, &pAqData->mQueue);
 		for (int i = 0; i < kNumberBuffers; ++i) {
 			AudioQueueAllocateBuffer(pAqData->mQueue, pAqData->bufferByteSize, &pAqData->mBuffers[i]);
 			AudioQueueCallback(pAqData, pAqData->mQueue, pAqData->mBuffers[i]);
@@ -178,15 +178,15 @@
 void AudioQueueCallback(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer) {
     AQPlayerState *pAqData = (AQPlayerState *)aqData;
     if (pAqData->mIsDone == YES) return;
-    UInt32 numBytesReadFromFile;
+    UInt32 numBytesReadFromFile = pAqData->bufferByteSize;
     UInt32 numPackets = pAqData->mNumPacketsToRead;
-    AudioFileReadPackets (pAqData->mAudioFile, false, &numBytesReadFromFile, pAqData->mPacketDescs, pAqData->mCurrentPacket, &numPackets, inBuffer->mAudioData);
+    AudioFileReadPacketData(pAqData->mAudioFile, false, &numBytesReadFromFile, pAqData->mPacketDescs, pAqData->mCurrentPacket, &numPackets, inBuffer->mAudioData);
     if (numPackets > 0) {
         inBuffer->mAudioDataByteSize = numBytesReadFromFile;
 		AudioQueueEnqueueBuffer(pAqData->mQueue, inBuffer, (pAqData->mPacketDescs ? numPackets : 0), pAqData->mPacketDescs);
         pAqData->mCurrentPacket += numPackets; 
     } else {
-        AudioQueueStop(pAqData->mQueue, false);
+		AudioQueueStop(pAqData->mQueue, false);
         pAqData->mIsDone = YES; 
     }
 	return;
