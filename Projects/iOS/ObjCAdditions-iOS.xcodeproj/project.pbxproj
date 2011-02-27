@@ -20,10 +20,6 @@
 		1748326C127F7F550073918D /* OANetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748326A127F7F550073918D /* OANetworkActivityIndicator.m */; };
 		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
-		1758AC5B12CD2559006C4F86 /* OASoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1758AC5812CD2559006C4F86 /* OASoundManager.h */; };
-		1758AC5C12CD2559006C4F86 /* OASoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1758AC5912CD2559006C4F86 /* OASoundManager.m */; };
-		1758AC5F12CD2781006C4F86 /* OASound.h in Headers */ = {isa = PBXBuildFile; fileRef = 1758AC5D12CD2781006C4F86 /* OASound.h */; };
-		1758AC6012CD2781006C4F86 /* OASound.m in Sources */ = {isa = PBXBuildFile; fileRef = 1758AC5E12CD2781006C4F86 /* OASound.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
 		179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D7A4C130C8B2300E41304 /* OACalloutView.h */; };
 		179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179D7A4D130C8B2300E41304 /* OACalloutView.m */; };
@@ -58,8 +54,6 @@
 		1748326A127F7F550073918D /* OANetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OANetworkActivityIndicator.m; sourceTree = "<group>"; };
 		174832F9127FF5850073918D /* UIDevice+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+OAAdditions.h"; sourceTree = "<group>"; };
 		174832FA127FF5850073918D /* UIDevice+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OAAdditions.m"; sourceTree = "<group>"; };
-		17507F26128DC48B00888147 /* OATableArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATableArrayController.h; sourceTree = "<group>"; };
-		17507F27128DC48B00888147 /* OATableArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATableArrayController.m; sourceTree = "<group>"; };
 		1758AC5812CD2559006C4F86 /* OASoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASoundManager.h; sourceTree = "<group>"; };
 		1758AC5912CD2559006C4F86 /* OASoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OASoundManager.m; sourceTree = "<group>"; };
 		1758AC5D12CD2781006C4F86 /* OASound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASound.h; sourceTree = "<group>"; };
@@ -150,8 +144,6 @@
 				1758AC5712CD24F9006C4F86 /* Sound Manager */,
 				17483269127F7F550073918D /* OANetworkActivityIndicator.h */,
 				1748326A127F7F550073918D /* OANetworkActivityIndicator.m */,
-				17507F26128DC48B00888147 /* OATableArrayController.h */,
-				17507F27128DC48B00888147 /* OATableArrayController.m */,
 			);
 			name = Classes;
 			path = ../../Source/Classes;
@@ -275,8 +267,6 @@
 				1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */,
 				17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */,
 				17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */,
-				1758AC5B12CD2559006C4F86 /* OASoundManager.h in Headers */,
-				1758AC5F12CD2781006C4F86 /* OASound.h in Headers */,
 				17CD77F812DA327F0023B633 /* CGGeometry+OAAdditions.h in Headers */,
 				179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */,
 			);
@@ -397,8 +387,6 @@
 				17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */,
 				17F6E8F8129498CD00966E3C /* NSDate+OAAdditions.m in Sources */,
 				17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */,
-				1758AC5C12CD2559006C4F86 /* OASoundManager.m in Sources */,
-				1758AC6012CD2781006C4F86 /* OASound.m in Sources */,
 				17CD77F912DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */,
 				179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */,
 			);
