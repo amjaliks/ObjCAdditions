@@ -51,6 +51,8 @@
 @property (nonatomic,retain) UIButton *calloutButton;
 
 - (void)prepareView;
+- (void)showAnimationWillStart:(NSString *)animationID context:(void *)context;
+- (void)showAnimationWillStart:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
 
 @end
 
@@ -172,8 +174,8 @@
 	
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDelegate:self];
-	[UIView setAnimationWillStartSelector:@selector(animationWillStart:context:)];
-	[UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
+	[UIView setAnimationWillStartSelector:@selector(showAnimationWillStart:context:)];
+	[UIView setAnimationDidStopSelector:@selector(showAnimationDidStop:finished:context:)];
 	[UIView setAnimationDuration:0.1];
 	
 	[parent addSubview:self];
@@ -185,10 +187,10 @@
 #pragma mark -
 #pragma mark Animation handlers
 
-- (void)animationDidStart:(NSString *)animationID context:(void *)context {
+- (void)showAnimationWillStart:(NSString *)animationID context:(void *)context {
 }
 
-- (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+- (void)showAnimationWillStart:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
 	self.transform = CGAffineTransformIdentity;
 }
 
