@@ -148,8 +148,8 @@
 		[UIView setAnimationDuration:0.1f];
 	}
 
-	CGSize titleSize = [self.calloutTitleLabel.text sizeWithFont:self.calloutTitleLabel.font];
-	CGSize subtitleSize = [self.calloutSubtitleLabel.text sizeWithFont:self.calloutSubtitleLabel.font];
+	CGSize titleSize = [self.calloutTitleLabel.text length] ? [self.calloutTitleLabel.text sizeWithFont:self.calloutTitleLabel.font] : CGSizeZero;
+	CGSize subtitleSize = [self.calloutSubtitleLabel.text length] ? [self.calloutSubtitleLabel.text sizeWithFont:self.calloutSubtitleLabel.font] : CGSizeZero;
 	
 	CGFloat labelWidth = MAX(titleSize.width, subtitleSize.width);
 	CGFloat titleOffset = roundf((LABEL_HEIGHT - titleSize.height - subtitleSize.height) / 2.0f);
