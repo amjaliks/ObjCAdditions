@@ -34,10 +34,14 @@
 	UILabel *calloutTitleLabel;
 	UILabel *calloutSubtitleLabel;
 	UIButton *calloutButton;
+	
+	CGPoint anchorPoint;
+	BOOL animationInProgress;
 }
 
 @property (nonatomic,retain) NSString *title;
 @property (nonatomic,retain) NSString *subtitle;
+@property (nonatomic) CGPoint anchorPoint;
 
 - (void)showAnimated:(UIView *)parent;
 - (void)setAnchorPoint:(CGPoint)point;

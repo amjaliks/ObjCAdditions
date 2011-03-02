@@ -21,7 +21,7 @@
 
 
 #import "OACalloutView.h"
-
+#import <QuartzCore/QuartzCore.h>
 
 #define CENTER_IMAGE_WIDTH 31
 #define CALLOUT_HEIGHT 70
@@ -51,8 +51,9 @@
 @property (nonatomic,retain) UIButton *calloutButton;
 
 - (void)prepareView;
+- (void)updateLayout:(BOOL)animated;
 - (void)showAnimationWillStart:(NSString *)animationID context:(void *)context;
-- (void)showAnimationWillStart:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
+- (void)showAnimationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
 
 @end
 
@@ -62,6 +63,7 @@
 #pragma mark -
 #pragma mark Synthesized properties
 
+@synthesize anchorPoint;
 @synthesize calloutButton;
 @synthesize calloutCenter;
 @synthesize calloutCenterImage;
@@ -129,16 +131,23 @@
 	self.calloutButton.adjustsImageWhenHighlighted = NO;
 	[self addSubview:self.calloutButton];
 	
-	[self layoutSubviews];
+	[self updateLayout:NO];
 }
 
 
 #pragma mark -
 #pragma mark UIView lifecycle
 
-- (void)layoutSubviews {
-	[super layoutSubviews];
-	
+- (void)updateLayout:(BOOL)animated {
+	if (animated && self.superview) {
+		[UIView beginAnimations:nil context:nil];
+		[UIView setAnimationBeginsFromCurrentState:YES];
+		[UIView setAnimationDelegate:self];
+		[UIView setAnimationWillStartSelector:@selector(showAnimationWillStart:context:)];
+		[UIView setAnimationDidStopSelector:@selector(showAnimationDidStop:finished:context:)];
+		[UIView setAnimationDuration:0.1f];
+	}
+
 	CGSize titleSize = [self.calloutTitleLabel.text sizeWithFont:self.calloutTitleLabel.font];
 	CGSize subtitleSize = [self.calloutSubtitleLabel.text sizeWithFont:self.calloutSubtitleLabel.font];
 	
@@ -163,6 +172,13 @@
 	buttonFrame.origin.x = frame.size.width - self.calloutButton.frame.size.width - MIN_RIGHT_IMAGE_WIDTH + 4.0f;
 	buttonFrame.origin.y = BUTTON_Y;
 	self.calloutButton.frame = buttonFrame;
+	
+	self.layer.anchorPoint = CGPointMake(ANCHOR_X / self.frame.size.width, ANCHOR_Y / self.frame.size.height);
+	self.center = anchorPoint;
+	
+	if (animated && self.superview) {
+		[UIView commitAnimations];
+	}
 }
 
    
@@ -176,9 +192,9 @@
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationWillStartSelector:@selector(showAnimationWillStart:context:)];
 	[UIView setAnimationDidStopSelector:@selector(showAnimationDidStop:finished:context:)];
-	[UIView setAnimationDuration:0.1];
-	
+	[UIView setAnimationDuration:0.1f];
 	[parent addSubview:self];
+	
 	self.transform = CGAffineTransformMakeScale(1.2f, 1.2f);
 	
 	[UIView commitAnimations];
@@ -188,9 +204,11 @@
 #pragma mark Animation handlers
 
 - (void)showAnimationWillStart:(NSString *)animationID context:(void *)context {
+	animationInProgress = YES;
 }
 
-- (void)showAnimationWillStart:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+- (void)showAnimationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+	animationInProgress = NO;
 	self.transform = CGAffineTransformIdentity;
 }
 
@@ -199,11 +217,14 @@
 #pragma mark Properties
 
 - (void)setTitle:(NSString *)title {
-	self.calloutTitleLabel.text = title;
-	if (title) {
+	if ([title length]) {
+		self.calloutTitleLabel.text = title;
 		[self addSubview:self.calloutTitleLabel];
+	} else {
+		self.calloutTitleLabel.text = nil;
+		[self.calloutTitleLabel removeFromSuperview];
 	}
-	[self layoutSubviews];
+	[self updateLayout:YES];
 }
 
 - (NSString *)title {
@@ -211,11 +232,14 @@
 }
 
 - (void)setSubtitle:(NSString *)subtitle {
-	self.calloutSubtitleLabel.text = subtitle;
-	if (subtitle) {
+	if ([subtitle length]) {
+		self.calloutSubtitleLabel.text = subtitle;
 		[self addSubview:self.calloutSubtitleLabel];
-	}
-	[self layoutSubviews];
+	} else {
+		self.calloutSubtitleLabel.text = nil;
+		[self.calloutSubtitleLabel removeFromSuperview];
+	}	
+	[self updateLayout:YES];
 }
 
 - (NSString *)subtitle {
@@ -223,10 +247,8 @@
 }
 
 - (void)setAnchorPoint:(CGPoint)point {
-	CGRect frame = self.frame;
-	frame.origin.x = point.x - ANCHOR_X;
-	frame.origin.y = point.y - ANCHOR_Y;
-	self.frame = frame;
+	anchorPoint = point;
+	[self updateLayout:NO];
 }
 
 - (void)addButtonTarget:(id)target action:(SEL)action {
