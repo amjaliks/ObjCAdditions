@@ -26,6 +26,8 @@
 		17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */; };
 		17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
 		17AC0E94129F2A170010FE39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AC0E93129F2A170010FE39 /* CoreGraphics.framework */; };
+		17BF02631332C6830022E057 /* OAStringBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BF02611332C6830022E057 /* OAStringBundle.h */; };
+		17BF02641332C6830022E057 /* OAStringBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF02621332C6830022E057 /* OAStringBundle.m */; };
 		17CD77F812DA327F0023B633 /* CGGeometry+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17CD77F612DA327F0023B633 /* CGGeometry+OAAdditions.h */; };
 		17CD77F912DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */; };
 		17CD77FA12DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */; };
@@ -66,6 +68,8 @@
 		17AC0E05129F227E0010FE39 /* NSDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTests.h; sourceTree = "<group>"; };
 		17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
 		17AC0E93129F2A170010FE39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		17BF02611332C6830022E057 /* OAStringBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAStringBundle.h; sourceTree = "<group>"; };
+		17BF02621332C6830022E057 /* OAStringBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAStringBundle.m; sourceTree = "<group>"; };
 		17CD77F612DA327F0023B633 /* CGGeometry+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+OAAdditions.h"; sourceTree = "<group>"; };
 		17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+OAAdditions.m"; sourceTree = "<group>"; };
 		17CD77FB12DA337B0023B633 /* CGGeometryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGGeometryTests.h; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				1758AC5712CD24F9006C4F86 /* Sound Manager */,
 				17483269127F7F550073918D /* OANetworkActivityIndicator.h */,
 				1748326A127F7F550073918D /* OANetworkActivityIndicator.m */,
+				17BF02611332C6830022E057 /* OAStringBundle.h */,
+				17BF02621332C6830022E057 /* OAStringBundle.m */,
 			);
 			name = Classes;
 			path = ../../Source/Classes;
@@ -269,6 +275,7 @@
 				17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */,
 				17CD77F812DA327F0023B633 /* CGGeometry+OAAdditions.h in Headers */,
 				179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */,
+				17BF02631332C6830022E057 /* OAStringBundle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +396,7 @@
 				17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */,
 				17CD77F912DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */,
 				179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */,
+				17BF02641332C6830022E057 /* OAStringBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
