@@ -21,6 +21,9 @@
 		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
 		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
+		178B10EC13355309007B485F /* NSNull+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 178B10EA13355309007B485F /* NSNull+OAAdditions.h */; };
+		178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B10EB13355309007B485F /* NSNull+OAAdditions.m */; };
+		178B10EF133553AA007B485F /* Foundation+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 178B10EE133553AA007B485F /* Foundation+OAAdditions.h */; };
 		179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D7A4C130C8B2300E41304 /* OACalloutView.h */; };
 		179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179D7A4D130C8B2300E41304 /* OACalloutView.m */; };
 		17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */; };
@@ -61,6 +64,9 @@
 		1758AC5D12CD2781006C4F86 /* OASound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASound.h; sourceTree = "<group>"; };
 		1758AC5E12CD2781006C4F86 /* OASound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OASound.m; sourceTree = "<group>"; };
 		1788E28E1212C62000E55682 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		178B10EA13355309007B485F /* NSNull+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+OAAdditions.h"; sourceTree = "<group>"; };
+		178B10EB13355309007B485F /* NSNull+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+OAAdditions.m"; sourceTree = "<group>"; };
+		178B10EE133553AA007B485F /* Foundation+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+OAAdditions.h"; sourceTree = "<group>"; };
 		179D7A4C130C8B2300E41304 /* OACalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACalloutView.h; sourceTree = "<group>"; };
 		179D7A4D130C8B2300E41304 /* OACalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACalloutView.m; sourceTree = "<group>"; };
 		17AC0DFD129F225C0010FE39 /* iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +175,7 @@
 			children = (
 				17CD77F612DA327F0023B633 /* CGGeometry+OAAdditions.h */,
 				17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */,
+				178B10EE133553AA007B485F /* Foundation+OAAdditions.h */,
 				17130B2E12A6F370005379C2 /* NSArray+OAAdditions.h */,
 				17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */,
 				17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */,
@@ -177,6 +184,8 @@
 				1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */,
 				1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */,
 				1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */,
+				178B10EA13355309007B485F /* NSNull+OAAdditions.h */,
+				178B10EB13355309007B485F /* NSNull+OAAdditions.m */,
 				1748323F127F7C250073918D /* NSString+MD5.h */,
 				17483241127F7C340073918D /* NSString+MD5.m */,
 				17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */,
@@ -276,6 +285,8 @@
 				17CD77F812DA327F0023B633 /* CGGeometry+OAAdditions.h in Headers */,
 				179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */,
 				17BF02631332C6830022E057 /* OAStringBundle.h in Headers */,
+				178B10EC13355309007B485F /* NSNull+OAAdditions.h in Headers */,
+				178B10EF133553AA007B485F /* Foundation+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +408,7 @@
 				17CD77F912DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */,
 				179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */,
 				17BF02641332C6830022E057 /* OAStringBundle.m in Sources */,
+				178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
