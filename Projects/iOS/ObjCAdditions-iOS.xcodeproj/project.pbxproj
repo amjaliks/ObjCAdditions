@@ -12,6 +12,9 @@
 		1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */; };
 		1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */; };
 		17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */; };
+		17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17382DC21336949B0079A48B /* UISearchBar+OAAdditions.h */; };
+		17382DC51336949B0079A48B /* UISearchBar+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17382DC31336949B0079A48B /* UISearchBar+OAAdditions.m */; };
+		17382DC713369DAF0079A48B /* UIKit+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17382DC613369DAE0079A48B /* UIKit+OAAdditions.h */; };
 		17483240127F7C250073918D /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 1748323F127F7C250073918D /* NSString+MD5.h */; };
 		17483244127F7C340073918D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483241127F7C340073918D /* NSString+MD5.m */; };
 		17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */; };
@@ -51,6 +54,9 @@
 		1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+OAAdditions.m"; sourceTree = "<group>"; };
 		17130B2E12A6F370005379C2 /* NSArray+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OAAdditions.h"; sourceTree = "<group>"; };
 		17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OAAdditions.m"; sourceTree = "<group>"; };
+		17382DC21336949B0079A48B /* UISearchBar+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+OAAdditions.h"; sourceTree = "<group>"; };
+		17382DC31336949B0079A48B /* UISearchBar+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+OAAdditions.m"; sourceTree = "<group>"; };
+		17382DC613369DAE0079A48B /* UIKit+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+OAAdditions.h"; sourceTree = "<group>"; };
 		1748323F127F7C250073918D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		17483241127F7C340073918D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+OAAdditions.h"; sourceTree = "<group>"; };
@@ -190,8 +196,11 @@
 				17483241127F7C340073918D /* NSString+MD5.m */,
 				17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */,
 				17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */,
+				17382DC613369DAE0079A48B /* UIKit+OAAdditions.h */,
 				174832F9127FF5850073918D /* UIDevice+OAAdditions.h */,
 				174832FA127FF5850073918D /* UIDevice+OAAdditions.m */,
+				17382DC21336949B0079A48B /* UISearchBar+OAAdditions.h */,
+				17382DC31336949B0079A48B /* UISearchBar+OAAdditions.m */,
 			);
 			name = Additions;
 			path = ../../Source/Additions;
@@ -287,6 +296,8 @@
 				17BF02631332C6830022E057 /* OAStringBundle.h in Headers */,
 				178B10EC13355309007B485F /* NSNull+OAAdditions.h in Headers */,
 				178B10EF133553AA007B485F /* Foundation+OAAdditions.h in Headers */,
+				17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */,
+				17382DC713369DAF0079A48B /* UIKit+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +420,7 @@
 				179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */,
 				17BF02641332C6830022E057 /* OAStringBundle.m in Sources */,
 				178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */,
+				17382DC51336949B0079A48B /* UISearchBar+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
