@@ -27,7 +27,6 @@
 
 - (NSString *)preferredLocalization;
 - (void)loadLocalization:(NSString *)localization;
-- (void)userDefaultsChanged:(NSNotification *)notification;
 
 @end
 
@@ -62,19 +61,10 @@
 	}
 }
 
-- (void)userDefaultsChanged:(NSNotification *)notification {
+- (void)reloadStrings {
 	[self loadLocalization:[self preferredLocalization]];
 }
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_SHARED_NAME(OAStringBundle,bundle)
-
-- (id)init {
-	self = [super init];
-	if (self) {
-		[self loadLocalization:[self preferredLocalization]];
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsChanged:) name:nil object:[NSUserDefaults standardUserDefaults]];
-	}
-	return self;
-}
 
 @end

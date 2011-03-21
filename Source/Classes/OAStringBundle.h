@@ -28,5 +28,6 @@
 
 + (OAStringBundle *)bundle;
 - (NSString *)localizedStringForKey:(NSString *)key;
+- (void)reloadStrings;
 
 @end
