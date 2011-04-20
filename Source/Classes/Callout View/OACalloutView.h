@@ -42,7 +42,11 @@
 @property (nonatomic,retain) NSString *title;
 @property (nonatomic,retain) NSString *subtitle;
 @property (nonatomic) CGPoint anchorPoint;
+@property (nonatomic) CGFloat maxWidth;
+@property (nonatomic) CGFloat labelOriginY;
+@property (nonatomic) CGFloat labelHeight;
 
+- (id)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage;
 - (void)showAnimated:(UIView *)parent;
 - (void)setAnchorPoint:(CGPoint)point;
 - (void)addButtonTarget:(id)target action:(SEL)action;

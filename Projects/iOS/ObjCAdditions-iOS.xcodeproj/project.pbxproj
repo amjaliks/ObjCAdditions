@@ -7,40 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1711B4F21288B14D005B0066 /* NSDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1711B4F01288B14D005B0066 /* NSDictionary+OAAdditions.h */; };
 		1711B4F31288B14D005B0066 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
-		1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1711B5C41288D151005B0066 /* NSMutableDictionary+OAAdditions.h */; };
 		1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */; };
 		17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */; };
 		17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17382DC21336949B0079A48B /* UISearchBar+OAAdditions.h */; };
 		17382DC51336949B0079A48B /* UISearchBar+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17382DC31336949B0079A48B /* UISearchBar+OAAdditions.m */; };
-		17382DC713369DAF0079A48B /* UIKit+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17382DC613369DAE0079A48B /* UIKit+OAAdditions.h */; };
-		17483240127F7C250073918D /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 1748323F127F7C250073918D /* NSString+MD5.h */; };
+		17382DC713369DAF0079A48B /* UIKit+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17382DC613369DAE0079A48B /* UIKit+OAAdditions.h */; settings = {ATTRIBUTES = (); }; };
 		17483244127F7C340073918D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483241127F7C340073918D /* NSString+MD5.m */; };
-		17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17483242127F7C340073918D /* NSUserDefaults+OAAdditions.h */; };
 		17483246127F7C340073918D /* NSUserDefaults+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483243127F7C340073918D /* NSUserDefaults+OAAdditions.m */; };
 		1748326B127F7F550073918D /* OANetworkActivityIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 17483269127F7F550073918D /* OANetworkActivityIndicator.h */; };
 		1748326C127F7F550073918D /* OANetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748326A127F7F550073918D /* OANetworkActivityIndicator.m */; };
 		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
-		1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 1788E28E1212C62000E55682 /* SynthesizeSingleton.h */; };
-		178B10EC13355309007B485F /* NSNull+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 178B10EA13355309007B485F /* NSNull+OAAdditions.h */; };
 		178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B10EB13355309007B485F /* NSNull+OAAdditions.m */; };
-		178B10EF133553AA007B485F /* Foundation+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 178B10EE133553AA007B485F /* Foundation+OAAdditions.h */; };
 		179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D7A4C130C8B2300E41304 /* OACalloutView.h */; };
 		179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179D7A4D130C8B2300E41304 /* OACalloutView.m */; };
 		17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */; };
 		17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
 		17AC0E94129F2A170010FE39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AC0E93129F2A170010FE39 /* CoreGraphics.framework */; };
-		17BF02631332C6830022E057 /* OAStringBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BF02611332C6830022E057 /* OAStringBundle.h */; };
+		17BF02631332C6830022E057 /* OAStringBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BF02611332C6830022E057 /* OAStringBundle.h */; settings = {ATTRIBUTES = (); }; };
 		17BF02641332C6830022E057 /* OAStringBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BF02621332C6830022E057 /* OAStringBundle.m */; };
-		17CD77F812DA327F0023B633 /* CGGeometry+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17CD77F612DA327F0023B633 /* CGGeometry+OAAdditions.h */; };
 		17CD77F912DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */; };
 		17CD77FA12DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */; };
 		17CD77FF12DA337B0023B633 /* CGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CD77FC12DA337B0023B633 /* CGGeometryTests.m */; };
 		17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F0129498A300966E3C /* ISO8601DateFormatter.h */; };
 		17F6E8F4129498A300966E3C /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6E8F1129498A300966E3C /* ISO8601DateFormatter.m */; };
-		17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */; };
 		17F6E8F8129498CD00966E3C /* NSDate+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F6E8F6129498CD00966E3C /* NSDate+OAAdditions.m */; };
 		3783BC401225544600FC0B1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3783BC3F1225544600FC0B1B /* MapKit.framework */; };
 		AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ObjCAdditions_Prefix.pch */; };
@@ -281,23 +272,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17382DC713369DAF0079A48B /* UIKit+OAAdditions.h in Headers */,
+				17BF02631332C6830022E057 /* OAStringBundle.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */,
-				1788E2921212C62000E55682 /* SynthesizeSingleton.h in Headers */,
-				17483240127F7C250073918D /* NSString+MD5.h in Headers */,
-				17483245127F7C340073918D /* NSUserDefaults+OAAdditions.h in Headers */,
 				1748326B127F7F550073918D /* OANetworkActivityIndicator.h in Headers */,
 				174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */,
-				1711B4F21288B14D005B0066 /* NSDictionary+OAAdditions.h in Headers */,
-				1711B5C61288D151005B0066 /* NSMutableDictionary+OAAdditions.h in Headers */,
 				17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */,
-				17F6E8F7129498CD00966E3C /* NSDate+OAAdditions.h in Headers */,
-				17CD77F812DA327F0023B633 /* CGGeometry+OAAdditions.h in Headers */,
 				179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */,
-				17BF02631332C6830022E057 /* OAStringBundle.h in Headers */,
-				178B10EC13355309007B485F /* NSNull+OAAdditions.h in Headers */,
-				178B10EF133553AA007B485F /* Foundation+OAAdditions.h in Headers */,
 				17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */,
-				17382DC713369DAF0079A48B /* UIKit+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,16 +473,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/ObjCAdditions.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ObjCAdditions_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
 			};
 			name = Debug;
 		};
@@ -508,12 +485,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/ObjCAdditions.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ObjCAdditions_Prefix.pch;
-				INSTALL_PATH = /usr/local/lib;
 			};
 			name = Release;
 		};
@@ -521,8 +495,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -531,7 +507,6 @@
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -540,6 +515,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -548,7 +524,6 @@
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
