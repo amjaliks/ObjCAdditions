@@ -83,6 +83,7 @@
 		self.calloutLeftImage = [leftImage stretchableImageWithLeftCapWidth:leftImage.size.width topCapHeight:0];
 		self.calloutCenterImage = centerImage;
 		self.calloutRightImage = [rightImage stretchableImageWithLeftCapWidth:1 topCapHeight:0];
+		self.maxWidth = 320.f;
 		[self prepareView];
 	}
 	return self;
@@ -142,7 +143,9 @@
 	CGSize titleSize = [self.calloutTitleLabel.text length] ? [self.calloutTitleLabel.text sizeWithFont:self.calloutTitleLabel.font] : CGSizeZero;
 	CGSize subtitleSize = [self.calloutSubtitleLabel.text length] ? [self.calloutSubtitleLabel.text sizeWithFont:self.calloutSubtitleLabel.font] : CGSizeZero;
 	
+	CGFloat maxLabelWidth = self.maxWidth - (MIN_LEFT_IMAGE_WIDTH + self.calloutButton.frame.size.width + MIN_RIGHT_IMAGE_WIDTH + 3.0f);
 	CGFloat labelWidth = MAX(titleSize.width, subtitleSize.width);
+	labelWidth = MIN(labelWidth, maxLabelWidth);
 	CGFloat titleOffset = self.labelOriginY + floorf((self.labelHeight - titleSize.height - subtitleSize.height) / 2.0f);
 				   
 	CGRect frame = self.frame;
