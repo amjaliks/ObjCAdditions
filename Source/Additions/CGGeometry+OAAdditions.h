@@ -29,3 +29,4 @@
 
 CGRect CGRectCentredInRect(CGRect a, CGRect b, BOOL round);
 CGRect CGRectBottom(CGRect a, CGFloat b);
+CGRect CGRectScale(CGRect rect, CGFloat scale);

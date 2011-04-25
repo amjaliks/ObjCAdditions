@@ -45,3 +45,10 @@ CGRect CGRectBottom(CGRect a, CGFloat b) {
 	
 	return a;
 }
+
+CGRect CGRectScale(CGRect rect, CGFloat scale) {
+	CGFloat mult = - (1.0f - scale);
+	CGFloat offsetX = rect.size.width * mult;
+	CGFloat offsetY = rect.size.height * mult;
+	return CGRectMake(rect.origin.x - offsetX / 2.0f, rect.origin.y - offsetY / 2.0f, rect.size.width + offsetX, rect.size.height + offsetY);
+}
