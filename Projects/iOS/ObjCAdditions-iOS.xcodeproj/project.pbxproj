@@ -22,6 +22,8 @@
 		178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B10EB13355309007B485F /* NSNull+OAAdditions.m */; };
 		179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D7A4C130C8B2300E41304 /* OACalloutView.h */; };
 		179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179D7A4D130C8B2300E41304 /* OACalloutView.m */; };
+		179F5E491366366D000A1CFF /* UIScrollView+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 179F5E471366366D000A1CFF /* UIScrollView+OAAdditions.h */; };
+		179F5E4A1366366D000A1CFF /* UIScrollView+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 179F5E481366366D000A1CFF /* UIScrollView+OAAdditions.m */; };
 		17AC0E07129F227E0010FE39 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC0E06129F227E0010FE39 /* NSDictionaryTests.m */; };
 		17AC0E1B129F29540010FE39 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
 		17AC0E94129F2A170010FE39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AC0E93129F2A170010FE39 /* CoreGraphics.framework */; };
@@ -66,6 +68,8 @@
 		178B10EE133553AA007B485F /* Foundation+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+OAAdditions.h"; sourceTree = "<group>"; };
 		179D7A4C130C8B2300E41304 /* OACalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACalloutView.h; sourceTree = "<group>"; };
 		179D7A4D130C8B2300E41304 /* OACalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACalloutView.m; sourceTree = "<group>"; };
+		179F5E471366366D000A1CFF /* UIScrollView+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+OAAdditions.h"; sourceTree = "<group>"; };
+		179F5E481366366D000A1CFF /* UIScrollView+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+OAAdditions.m"; sourceTree = "<group>"; };
 		17AC0DFD129F225C0010FE39 /* iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AC0DFE129F225C0010FE39 /* iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSTests-Info.plist"; sourceTree = "<group>"; };
 		17AC0E05129F227E0010FE39 /* NSDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryTests.h; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				17382DC613369DAE0079A48B /* UIKit+OAAdditions.h */,
 				174832F9127FF5850073918D /* UIDevice+OAAdditions.h */,
 				174832FA127FF5850073918D /* UIDevice+OAAdditions.m */,
+				179F5E471366366D000A1CFF /* UIScrollView+OAAdditions.h */,
+				179F5E481366366D000A1CFF /* UIScrollView+OAAdditions.m */,
 				17382DC21336949B0079A48B /* UISearchBar+OAAdditions.h */,
 				17382DC31336949B0079A48B /* UISearchBar+OAAdditions.m */,
 			);
@@ -280,6 +286,7 @@
 				17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */,
 				179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */,
 				17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */,
+				179F5E491366366D000A1CFF /* UIScrollView+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +410,7 @@
 				17BF02641332C6830022E057 /* OAStringBundle.m in Sources */,
 				178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */,
 				17382DC51336949B0079A48B /* UISearchBar+OAAdditions.m in Sources */,
+				179F5E4A1366366D000A1CFF /* UIScrollView+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
