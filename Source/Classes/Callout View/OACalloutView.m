@@ -80,10 +80,11 @@
 - (id)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage {
 	self = [super init];
 	if (self) {
-		self.calloutLeftImage = [leftImage stretchableImageWithLeftCapWidth:leftImage.size.width topCapHeight:0];
+		self.calloutLeftImage = [leftImage stretchableImageWithLeftCapWidth:leftImage.size.width - 1 topCapHeight:0];
 		self.calloutCenterImage = centerImage;
 		self.calloutRightImage = [rightImage stretchableImageWithLeftCapWidth:1 topCapHeight:0];
 		self.maxWidth = 320.f;
+		self.userInteractionEnabled = NO;
 		[self prepareView];
 	}
 	return self;
@@ -98,23 +99,28 @@
 	self.opaque = NO;
 	
 	self.calloutLeft = [[[UIImageView alloc] init] autorelease];
+	self.calloutLeft.userInteractionEnabled = NO;
 	self.calloutLeft.image = self.calloutLeftImage;
 	[self addSubview:self.calloutLeft];
 
 	self.calloutCenter = [[[UIImageView alloc] init] autorelease];
+	self.calloutCenter.userInteractionEnabled = NO;
 	self.calloutCenter.image = self.calloutCenterImage;
 	[self addSubview:self.calloutCenter];
 		
 	self.calloutRight = [[[UIImageView alloc] init] autorelease];
+	self.calloutRight.userInteractionEnabled = NO;
 	self.calloutRight.image = self.calloutRightImage;
 	[self addSubview:self.calloutRight];
 
 	self.calloutTitleLabel = [[[UILabel alloc] init] autorelease];
+	self.calloutTitleLabel.userInteractionEnabled = NO;
 	self.calloutTitleLabel.font = [UIFont boldSystemFontOfSize:TITLE_FONT_SIZE];
 	self.calloutTitleLabel.textColor = [UIColor whiteColor];
 	self.calloutTitleLabel.backgroundColor = [UIColor clearColor];
 	
 	self.calloutSubtitleLabel = [[[UILabel alloc] init] autorelease];
+	self.calloutSubtitleLabel.userInteractionEnabled = NO;
 	self.calloutSubtitleLabel.font = [UIFont systemFontOfSize:SUBTITLE_FONT_SIZE];
 	self.calloutSubtitleLabel.textColor = [UIColor whiteColor];
 	self.calloutSubtitleLabel.backgroundColor = [UIColor clearColor];
