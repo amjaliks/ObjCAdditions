@@ -252,4 +252,8 @@
 	[self.calloutButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+	return calloutButton && CGRectContainsPoint(calloutButton.frame, point);
+}
+
 @end
