@@ -37,5 +37,6 @@
 
 - (void)show;
 - (void)hide;
+- (void)hideAfterDelay:(NSTimeInterval)interval;
 
 @end

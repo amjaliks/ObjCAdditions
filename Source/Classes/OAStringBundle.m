@@ -20,6 +20,10 @@
 #import "OAStringBundle.h"
 #import "SynthesizeSingleton.h"
 
+
+NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDidReloadStringsNotification";
+
+
 @interface OAStringBundle ()
 
 @property (nonatomic,retain) NSString *loadedLocalization;
@@ -37,7 +41,7 @@
 @synthesize strings;
 
 - (NSString *)localizedStringForKey:(NSString *)key {
-	NSString *string = [self.strings objectForKey:key];
+	NSString *string = [strings objectForKey:key];
 	return string ? string : key;
 }
 
@@ -63,6 +67,7 @@
 
 - (void)reloadStrings {
 	[self loadLocalization:[self preferredLocalization]];
+	[[NSNotificationCenter defaultCenter] postNotificationName:OAStringBundleDidReloadStringsNotification object:self];
 }
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_SHARED_NAME(OAStringBundle,bundle)

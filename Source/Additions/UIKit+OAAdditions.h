@@ -20,3 +20,4 @@
 #import "UIDevice+OAAdditions.h"
 #import "UIScrollView+OAAdditions.h"
 #import "UISearchBar+OAAdditions.h"
+#import "UITableView+OAAdditions.h"

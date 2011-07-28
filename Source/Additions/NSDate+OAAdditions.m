@@ -29,7 +29,7 @@
 @implementation NSDate (OAAdditions)
 
 + (NSDate *)dateFromISO8601String:(NSString *)string {
-	ISO8601DateFormatter *formater = [[ISO8601DateFormatter alloc] init];
+	ISO8601DateFormatter *formater = [[[ISO8601DateFormatter alloc] init] autorelease];
 	return [formater dateFromString:string];
 }
 

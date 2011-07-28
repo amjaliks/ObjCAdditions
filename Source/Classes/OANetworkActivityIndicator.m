@@ -48,6 +48,10 @@
 	}
 }
 
+- (void)hideAfterDelay:(NSTimeInterval)interval {
+	[self performSelector:@selector(hide) withObject:nil afterDelay:interval];
+}
+
 #pragma mark Singleton metodes
 
 SYNTHESIZE_SINGLETON_FOR_CLASS_SHARED_NAME(OANetworkActivityIndicator,networkActivityIndicator)

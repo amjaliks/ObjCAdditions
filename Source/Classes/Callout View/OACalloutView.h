@@ -39,12 +39,13 @@
 	BOOL animationInProgress;
 }
 
-@property (nonatomic,retain) NSString *title;
-@property (nonatomic,retain) NSString *subtitle;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *subtitle;
 @property (nonatomic) CGPoint anchorPoint;
 @property (nonatomic) CGFloat maxWidth;
 @property (nonatomic) CGFloat labelOriginY;
 @property (nonatomic) CGFloat labelHeight;
+@property (nonatomic, retain, readonly) UIButton *calloutButton;
 
 - (id)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage;
 - (void)showAnimated:(UIView *)parent;

@@ -1,5 +1,5 @@
 //
-//  OAStringBundle.h
+//  UISearchBar+OAAdditions.h
 //  ObjCAdditions
 //
 // Copyright 2011 A25 SIA
@@ -17,20 +17,16 @@
 // limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
 
-#define OALocalizedString(key, comment) [[OAStringBundle bundle] localizedStringForKey:key]
+#import "UITableView+OAAdditions.h"
 
-extern NSString * const OAStringBundleDidReloadStringsNotification;
+@implementation UITableView (OAAdditions)
 
-@interface OAStringBundle : NSObject {
-    NSString *loadedLocalization;
-	NSDictionary *strings;
+- (void)reloadDataPreservingSelection
+{
+	NSIndexPath *indexPath = [self indexPathForSelectedRow];
+	[self reloadData];
+	[self selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];	
 }
-
-+ (OAStringBundle *)bundle;
-- (NSString *)loadedLocalization;
-- (NSString *)localizedStringForKey:(NSString *)key;
-- (void)reloadStrings;
 
 @end
