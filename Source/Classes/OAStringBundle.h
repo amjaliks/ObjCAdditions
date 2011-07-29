@@ -24,12 +24,12 @@
 extern NSString * const OAStringBundleDidReloadStringsNotification;
 
 @interface OAStringBundle : NSObject {
-    NSString *loadedLocalization;
+    NSString *localization;
 	NSDictionary *strings;
 }
 
 + (OAStringBundle *)bundle;
-- (NSString *)loadedLocalization;
+- (NSString *)localization;
 - (NSString *)localizedStringForKey:(NSString *)key;
 - (void)reloadStrings;
 

@@ -26,9 +26,6 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 
 @interface OAStringBundle ()
 
-@property (nonatomic,retain) NSString *loadedLocalization;
-@property (nonatomic,retain) NSDictionary *strings;
-
 - (NSString *)preferredLocalization;
 - (void)loadLocalization:(NSString *)localization;
 
@@ -37,8 +34,10 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 
 @implementation OAStringBundle
 
-@synthesize loadedLocalization;
-@synthesize strings;
+- (NSString *)localization
+{
+	return localization;
+}
 
 - (NSString *)localizedStringForKey:(NSString *)key {
 	NSString *string = [strings objectForKey:key];
@@ -46,21 +45,23 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 }
 
 - (NSString *)preferredLocalization {
-	for (NSString *localization in [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"]) {
-		if ([[[NSBundle mainBundle] localizations] containsObject:localization]) {
-			return localization;
+	for (NSString *curLocalization in [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"]) {
+		if ([[[NSBundle mainBundle] localizations] containsObject:curLocalization]) {
+			return curLocalization;
 		}
 	}
 	return @"en";
 }
 
-- (void)loadLocalization:(NSString *)localization {
-	if (![localization isEqualToString:self.loadedLocalization]) {
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:nil forLocalization:localization];
+- (void)loadLocalization:(NSString *)newLocalization {
+	if (![newLocalization isEqualToString:localization]) {
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:nil forLocalization:newLocalization];
 		NSDictionary *tmpStrings = [NSDictionary dictionaryWithContentsOfFile:path];
 		if (tmpStrings) {
-			self.strings = tmpStrings;
-			self.loadedLocalization = localization;
+			[strings autorelease];
+			strings = [tmpStrings retain];;
+			[localization autorelease];
+			localization = [newLocalization retain];
 		}
 	}
 }
