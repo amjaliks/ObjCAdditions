@@ -153,8 +153,8 @@
 	frame.size.width = labelWidth + MIN_LEFT_IMAGE_WIDTH + self.calloutButton.frame.size.width + MIN_RIGHT_IMAGE_WIDTH + 3.0f;
 	self.frame = frame;	
 	
-	CGFloat leftWidth = ANCHOR_X - CENTER_IMAGE_ANCHOR_OFFSET_X;
-	CGFloat rightWidth = frame.size.width - leftWidth - CENTER_IMAGE_WIDTH;
+	CGFloat leftWidth = ceilf((frame.size.width - calloutCenterImage.size.width) / 2.0f);
+	CGFloat rightWidth = frame.size.width - leftWidth - calloutCenterImage.size.width;
 	
 	CGRect titleLabelFrame = CGRectMake(MIN_LEFT_IMAGE_WIDTH, titleOffset, labelWidth, titleSize.height);
 	CGRect subtitleLabelFrame = CGRectMake(MIN_LEFT_IMAGE_WIDTH, titleOffset + titleSize.height, labelWidth, subtitleSize.height);
@@ -170,7 +170,7 @@
 	buttonFrame.origin.y = self.labelOriginY + floorf((self.labelHeight - buttonFrame.size.height) / 2.0f);
 	self.calloutButton.frame = buttonFrame;
 	
-	self.layer.anchorPoint = CGPointMake(ANCHOR_X / self.frame.size.width, ANCHOR_Y / self.frame.size.height);
+	self.layer.anchorPoint = CGPointMake(0.5f, ANCHOR_Y / self.frame.size.height);
 	self.center = anchorPoint;
 	
 	if (animated && self.superview) {
