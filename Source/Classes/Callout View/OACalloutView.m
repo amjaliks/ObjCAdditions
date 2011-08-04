@@ -130,7 +130,19 @@
 #pragma mark -
 #pragma mark UIView lifecycle
 
+- (void)updateLayout
+{
+	if (animationInProgress) {
+		layoutUpdateNeeded = YES;
+	} else {
+		layoutUpdateNeeded = NO;
+		[self updateLayout:YES];
+	}
+}
+
 - (void)updateLayout:(BOOL)animated {
+	animationInProgress = YES;
+
 	if (animated && self.superview) {
 		[UIView beginAnimations:nil context:nil];
 		[UIView setAnimationBeginsFromCurrentState:YES];
@@ -175,6 +187,8 @@
 	
 	if (animated && self.superview) {
 		[UIView commitAnimations];
+	} else {
+		animationInProgress = NO;
 	}
 }
 
@@ -183,6 +197,8 @@
 #pragma mark Control methods
 
 - (void)showAnimated:(UIView *)parent {
+	animationInProgress = YES;
+	
 	self.transform = CGAffineTransformMakeScale(0.8f, 0.8f);
 	
 	[UIView beginAnimations:nil context:nil];
@@ -207,6 +223,10 @@
 - (void)showAnimationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
 	animationInProgress = NO;
 	self.transform = CGAffineTransformIdentity;
+	
+	if (layoutUpdateNeeded) {
+		[self updateLayout];
+	}
 }
 
 
@@ -221,7 +241,7 @@
 		self.calloutTitleLabel.text = nil;
 		[self.calloutTitleLabel removeFromSuperview];
 	}
-	[self updateLayout:YES];
+	[self updateLayout];
 }
 
 - (NSString *)title {
@@ -235,8 +255,8 @@
 	} else {
 		self.calloutSubtitleLabel.text = nil;
 		[self.calloutSubtitleLabel removeFromSuperview];
-	}	
-	[self updateLayout:YES];
+	}
+	[self updateLayout];
 }
 
 - (NSString *)subtitle {
@@ -245,7 +265,7 @@
 
 - (void)setAnchorPoint:(CGPoint)point {
 	anchorPoint = point;
-	[self updateLayout:NO];
+	self.center = anchorPoint;
 }
 
 - (void)addButtonTarget:(id)target action:(SEL)action {

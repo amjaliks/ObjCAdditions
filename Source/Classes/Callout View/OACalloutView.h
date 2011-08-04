@@ -37,6 +37,7 @@
 	
 	CGPoint anchorPoint;
 	BOOL animationInProgress;
+	BOOL layoutUpdateNeeded;
 }
 
 @property (nonatomic, retain) NSString *title;
@@ -51,5 +52,7 @@
 - (void)showAnimated:(UIView *)parent;
 - (void)setAnchorPoint:(CGPoint)point;
 - (void)addButtonTarget:(id)target action:(SEL)action;
+- (void)updateLayout;
+- (void)updateLayout:(BOOL)animated;
 
 @end
