@@ -2,7 +2,7 @@
 //  UIDevice+OAAdditions.h
 //  ObjCAdditions
 //
-//  Copyright (c) 2010 A25 SIA
+//  Copyright (c) 2011 A25 SIA
 //  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -32,5 +32,8 @@
  Checks the currect system version, is it equal to required or later.
  */
 - (BOOL)systemVersionEqualsOrLater:(NSString *)requiredVersion;
+
+- (NSString *)macAddress;
+- (NSString *)hashedMacAddress;
 
 @end

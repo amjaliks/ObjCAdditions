@@ -147,7 +147,7 @@ static BOOL is_leap_year(unsigned year);
 	unichar timeSep = self.timeSeparator;
 
 	if (strict) timeSep = ISO8601DefaultTimeSeparatorCharacter;
-	NSAssert(timeSep != '\0', @"Time separator must not be NUL.");
+	NSAssert(timeSep != '\0', @"Time separator must not be NULL.");
 
 	BOOL isValidDate = ([string length] > 0U);
 	NSTimeZone *timeZone = nil;
