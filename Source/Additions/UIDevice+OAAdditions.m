@@ -24,7 +24,11 @@
 //
 
 #import "UIDevice+OAAdditions.h"
-
+#import "NSString+MD5.h"
+#import <sys/sysctl.h>
+#import <sys/socket.h>
+#import <net/if.h>
+#import <net/if_dl.h>
 
 @implementation UIDevice (OAAdditions)
 
