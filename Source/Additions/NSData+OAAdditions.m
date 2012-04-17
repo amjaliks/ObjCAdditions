@@ -7,22 +7,12 @@
 #import <CommonCrypto/CommonDigest.h>
 
 
-@implementation NSString (MD5)
-
-+ (NSString *)generateUUID
-{
-	CFUUIDRef uuid = CFUUIDCreate(NULL);
-	CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
-	CFRelease(uuid);
-	return [(NSString *)uuidStr autorelease];
-}
+@implementation NSData (MD5)
 
 - (NSString *)MD5Hash {
-	const char *cStr = [self UTF8String];
-	
 	unsigned char result[CC_MD5_DIGEST_LENGTH];
 	
-	CC_MD5(cStr, strlen(cStr), result );
+	CC_MD5([self bytes], [self length], result);
 	return [NSString stringWithFormat:
 				@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
 				result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],

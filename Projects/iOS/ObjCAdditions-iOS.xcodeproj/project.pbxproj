@@ -10,6 +10,8 @@
 		1711B4F31288B14D005B0066 /* NSDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B4F11288B14D005B0066 /* NSDictionary+OAAdditions.m */; };
 		1711B5C71288D151005B0066 /* NSMutableDictionary+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */; };
 		17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */; };
+		1732CC65153DAB050058F1A1 /* NSData+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1732CC63153DAB050058F1A1 /* NSData+OAAdditions.h */; };
+		1732CC66153DAB050058F1A1 /* NSData+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1732CC64153DAB050058F1A1 /* NSData+OAAdditions.m */; };
 		1734FD6113E1FBD7007291FB /* UITableView+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1734FD5F13E1FBD7007291FB /* UITableView+OAAdditions.h */; };
 		1734FD6213E1FBD8007291FB /* UITableView+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1734FD6013E1FBD7007291FB /* UITableView+OAAdditions.m */; };
 		17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17382DC21336949B0079A48B /* UISearchBar+OAAdditions.h */; };
@@ -49,6 +51,8 @@
 		1711B5C51288D151005B0066 /* NSMutableDictionary+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+OAAdditions.m"; sourceTree = "<group>"; };
 		17130B2E12A6F370005379C2 /* NSArray+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OAAdditions.h"; sourceTree = "<group>"; };
 		17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OAAdditions.m"; sourceTree = "<group>"; };
+		1732CC63153DAB050058F1A1 /* NSData+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+OAAdditions.h"; sourceTree = "<group>"; };
+		1732CC64153DAB050058F1A1 /* NSData+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+OAAdditions.m"; sourceTree = "<group>"; };
 		1734FD5F13E1FBD7007291FB /* UITableView+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+OAAdditions.h"; sourceTree = "<group>"; };
 		1734FD6013E1FBD7007291FB /* UITableView+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+OAAdditions.m"; sourceTree = "<group>"; };
 		17382DC21336949B0079A48B /* UISearchBar+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+OAAdditions.h"; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				178B10EE133553AA007B485F /* Foundation+OAAdditions.h */,
 				17130B2E12A6F370005379C2 /* NSArray+OAAdditions.h */,
 				17130B2F12A6F370005379C2 /* NSArray+OAAdditions.m */,
+				1732CC63153DAB050058F1A1 /* NSData+OAAdditions.h */,
+				1732CC64153DAB050058F1A1 /* NSData+OAAdditions.m */,
 				17F6E8F5129498CD00966E3C /* NSDate+OAAdditions.h */,
 				17F6E8F6129498CD00966E3C /* NSDate+OAAdditions.m */,
 				1711B4F01288B14D005B0066 /* NSDictionary+OAAdditions.h */,
@@ -294,6 +300,7 @@
 				17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */,
 				179F5E491366366D000A1CFF /* UIScrollView+OAAdditions.h in Headers */,
 				1734FD6113E1FBD7007291FB /* UITableView+OAAdditions.h in Headers */,
+				1732CC65153DAB050058F1A1 /* NSData+OAAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +429,7 @@
 				17382DC51336949B0079A48B /* UISearchBar+OAAdditions.m in Sources */,
 				179F5E4A1366366D000A1CFF /* UIScrollView+OAAdditions.m in Sources */,
 				1734FD6213E1FBD8007291FB /* UITableView+OAAdditions.m in Sources */,
+				1732CC66153DAB050058F1A1 /* NSData+OAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
