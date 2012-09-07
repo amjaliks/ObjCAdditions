@@ -18,8 +18,6 @@
 //
 
 #import "OAStringBundle.h"
-#import "SynthesizeSingleton.h"
-
 
 NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDidReloadStringsNotification";
 
@@ -33,6 +31,15 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 
 
 @implementation OAStringBundle
+
++ (OAStringBundle *)bundle
+{
+	static dispatch_once_t pred;
+	static OAStringBundle *bundle = nil;
+	dispatch_once(&pred, ^{ bundle = [[self alloc] init]; });
+	
+	return bundle;
+}
 
 - (NSString *)localization
 {
@@ -58,10 +65,8 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 		NSString *path = [[NSBundle mainBundle] pathForResource:@"Localizable" ofType:@"strings" inDirectory:nil forLocalization:newLocalization];
 		NSDictionary *tmpStrings = [NSDictionary dictionaryWithContentsOfFile:path];
 		if (tmpStrings) {
-			[strings autorelease];
-			strings = [tmpStrings retain];;
-			[localization autorelease];
-			localization = [newLocalization retain];
+			strings = tmpStrings;
+			localization = newLocalization;
 		}
 	}
 }
@@ -70,7 +75,5 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 	[self loadLocalization:[self preferredLocalization]];
 	[[NSNotificationCenter defaultCenter] postNotificationName:OAStringBundleDidReloadStringsNotification object:self];
 }
-
-SYNTHESIZE_SINGLETON_FOR_CLASS_SHARED_NAME(OAStringBundle,bundle)
 
 @end

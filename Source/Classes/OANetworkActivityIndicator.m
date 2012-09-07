@@ -24,9 +24,17 @@
 //
 
 #import "OANetworkActivityIndicator.h"
-#import "SynthesizeSingleton.h"
 
 @implementation OANetworkActivityIndicator
+
++ (OANetworkActivityIndicator *)networkActivityIndicator
+{
+	static dispatch_once_t pred;
+	static OANetworkActivityIndicator *networkActivityIndicator = nil;
+	dispatch_once(&pred, ^{ networkActivityIndicator = [[self alloc] init]; });
+	
+	return networkActivityIndicator;
+}
 
 - (void)show {
 	@synchronized (self) {
@@ -51,9 +59,5 @@
 - (void)hideAfterDelay:(NSTimeInterval)interval {
 	[self performSelector:@selector(hide) withObject:nil afterDelay:interval];
 }
-
-#pragma mark Singleton metodes
-
-SYNTHESIZE_SINGLETON_FOR_CLASS_SHARED_NAME(OANetworkActivityIndicator,networkActivityIndicator)
 
 @end
