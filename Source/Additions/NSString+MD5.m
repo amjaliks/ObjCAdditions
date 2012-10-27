@@ -14,7 +14,7 @@
 	CFUUIDRef uuid = CFUUIDCreate(NULL);
 	CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
 	CFRelease(uuid);
-	return [(NSString *)uuidStr autorelease];
+	return (__bridge NSString *)uuidStr;
 }
 
 - (NSString *)MD5Hash {
