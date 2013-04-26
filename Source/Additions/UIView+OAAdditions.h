@@ -1,5 +1,5 @@
 //
-//  UIAlertView+OAAdditions.m
+//  UIView+OAAdditions.h
 //  ObjCAdditions
 //
 //  Copyright (c) 2013 A25 SIA
@@ -23,21 +23,11 @@
 //  THE SOFTWARE.
 //
 
-#import "UIAlertView+OAAdditions.h"
+#import <UIKit/UIKit.h>
 
-@implementation UIAlertView (OAAdditions)
+@interface UIView (OAAdditions)
 
-+ (UIAlertView *)alertViewWithTitle:(NSString *)title
-							  error:(NSError *)error
-						   delegate:(id<UIAlertViewDelegate>)delegate
-				  cancelButtonTitle:(NSString *)cancelButtonTitle
-{
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
-														message:error.localizedDescription
-													   delegate:delegate
-											  cancelButtonTitle:cancelButtonTitle
-											  otherButtonTitles:nil];
-	return alertView;
-}
+- (void)alignVerticallyView:(UIView *)view left:(CGFloat)left;
+- (void)alignVerticallyView:(UIView *)view right:(CGFloat)right;
 
 @end

@@ -22,3 +22,4 @@
 #import "UIScrollView+OAAdditions.h"
 #import "UISearchBar+OAAdditions.h"
 #import "UITableView+OAAdditions.h"
+#import "UIView+OAAdditions.h"
