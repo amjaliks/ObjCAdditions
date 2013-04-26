@@ -2,7 +2,7 @@
 //  NSDate+OAAdditions.h
 //  ObjCAdditions
 //
-//  Copyright (c) 2010 A25 SIA
+//  Copyright (c) 2013 A25 SIA
 //  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -32,5 +32,7 @@
  Parses ISO8601 compliant formated string with date and returns NSDate
  */
 + (NSDate *)dateFromISO8601String:(NSString *)string;
+
+- (BOOL)isToday;
 
 @end
