@@ -2,7 +2,7 @@
 //  NSDate+OAAdditions.m
 //  ObjCAdditions
 //
-//  Copyright (c) 2010 A25 SIA
+//  Copyright (c) 2013 A25 SIA
 //  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -29,8 +29,17 @@
 @implementation NSDate (OAAdditions)
 
 + (NSDate *)dateFromISO8601String:(NSString *)string {
-	ISO8601DateFormatter *formater = [[[ISO8601DateFormatter alloc] init] autorelease];
+	ISO8601DateFormatter *formater = [[ISO8601DateFormatter alloc] init];
 	return [formater dateFromString:string];
+}
+
+- (BOOL)isToday
+{
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSDateComponents *selfComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:self];
+	NSDateComponents *todayComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:[NSDate date]];
+	
+	return selfComponents.year == todayComponents.year && selfComponents.month == todayComponents.month && selfComponents.day == todayComponents.day;
 }
 
 @end

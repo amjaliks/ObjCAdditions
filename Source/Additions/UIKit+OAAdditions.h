@@ -17,7 +17,9 @@
 // limitations under the License.
 //
 
+#import "UIAlertView+OAAdditions.h"
 #import "UIDevice+OAAdditions.h"
 #import "UIScrollView+OAAdditions.h"
 #import "UISearchBar+OAAdditions.h"
 #import "UITableView+OAAdditions.h"
+#import "UIView+OAAdditions.h"

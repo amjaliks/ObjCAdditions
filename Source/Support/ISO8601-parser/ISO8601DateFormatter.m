@@ -42,10 +42,6 @@ unichar ISO8601DefaultTimeSeparatorCharacter = DEFAULT_TIME_SEPARATOR;
 	}
 	return self;
 }
-- (void) dealloc {
-	[defaultTimeZone release];
-	[super dealloc];
-}
 
 @synthesize defaultTimeZone;
 
@@ -116,11 +112,11 @@ static BOOL is_leap_year(unsigned year);
 	return [self dateComponentsFromString:string timeZone:outTimeZone range:NULL];
 }
 - (NSDateComponents *) dateComponentsFromString:(NSString *)string timeZone:(out NSTimeZone **)outTimeZone range:(out NSRange *)outRange {
-	NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	calendar.firstWeekday = 2; //Monday
 	NSDate *now = [NSDate date];
 
-	NSDateComponents *components = [[[NSDateComponents alloc] init] autorelease];
+	NSDateComponents *components = [[NSDateComponents alloc] init];
 	NSDateComponents *nowComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:now];
 
 	unsigned
@@ -573,7 +569,7 @@ static BOOL is_leap_year(unsigned year);
 	return [self dateFromString:string timeZone:outTimeZone range:NULL];
 }
 - (NSDate *) dateFromString:(NSString *)string timeZone:(out NSTimeZone **)outTimeZone range:(out NSRange *)outRange {
-	NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	calendar.firstWeekday = 2; //Monday
 
 	NSTimeZone *timeZone = nil;
@@ -600,7 +596,7 @@ static BOOL is_leap_year(unsigned year);
 
 - (NSString *) replaceColonsInString:(NSString *)timeFormat withTimeSeparator:(unichar)timeSep {
 	if (timeSep != ':') {
-		NSMutableString *timeFormatMutable = [[timeFormat mutableCopy] autorelease];
+		NSMutableString *timeFormatMutable = [timeFormat mutableCopy];
 		[timeFormatMutable replaceOccurrencesOfString:@":"
 		                               	   withString:[NSString stringWithCharacters:&timeSep length:1U]
 	                                      	  options:NSBackwardsSearch | NSLiteralSearch
@@ -634,7 +630,7 @@ static BOOL is_leap_year(unsigned year);
 	if (includeTime)
 		dateFormat = [dateFormat stringByAppendingFormat:@"'T'%@", [self replaceColonsInString:ISO_TIME_FORMAT withTimeSeparator:self.timeSeparator]];
 
-	NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	calendar.firstWeekday = 2; //Monday
 
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -643,8 +639,6 @@ static BOOL is_leap_year(unsigned year);
 	formatter.calendar = calendar;
 
 	NSString *str = [formatter stringForObjectValue:date];
-
-	[formatter release];
 
 	if (includeTime) {
 		int offset = [timeZone secondsFromGMT];
@@ -669,7 +663,7 @@ static BOOL is_leap_year(unsigned year);
  *	http://personal.ecu.edu/mccartyr/ISOwdALG.txt
  */
 - (NSString *) weekDateStringForDate:(NSDate *)date timeZone:(NSTimeZone *)timeZone {
-	NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	calendar.timeZone = timeZone;
 	NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSWeekdayCalendarUnit | NSDayCalendarUnit fromDate:date];
 
@@ -730,8 +724,6 @@ static BOOL is_leap_year(unsigned year);
 		formatter.dateFormat = [self replaceColonsInString:ISO_TIME_WITH_TIMEZONE_FORMAT withTimeSeparator:timeSep];
 
 		timeString = [formatter stringForObjectValue:self];
-
-		[formatter release];
 	} else
 		timeString = @"";
 

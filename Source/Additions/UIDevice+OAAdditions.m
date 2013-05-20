@@ -2,8 +2,8 @@
 //  UIDevice+OAAdditions.m
 //  ObjCAdditions
 //
-//  Copyright (c) 2011 A25 SIA
-//  
+//  Copyright (c) 2013 A25 SIA
+//
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -85,6 +85,28 @@
 - (NSString *)hashedMacAddress
 {
     return [[[UIDevice currentDevice] macAddress] MD5Hash];
+}
+
+- (NSString *)UUID
+{
+    static NSString *identifier;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        identifier = [[NSUserDefaults standardUserDefaults] objectForKey:@"UIDeviceUUID"];
+        if (!identifier) {
+            CFUUIDRef UUID = CFUUIDCreate(NULL);
+            CFStringRef string = CFUUIDCreateString(NULL, UUID);
+            
+            identifier = (__bridge NSString *)string;
+            [[NSUserDefaults standardUserDefaults] setObject:identifier forKey:@"UIDeviceUUID"];
+            
+            CFRelease(string);
+            CFRelease(UUID);
+        }
+    });
+    
+    return identifier;
 }
 
 @end

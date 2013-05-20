@@ -37,27 +37,22 @@
 }
 
 - (void)show {
-	@synchronized (self) {
-		if (showCount == 0) {
-			[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-		}
-		
+    dispatch_async(dispatch_get_main_queue(), ^{
 		showCount++;
-	}
+		if (showCount > 0) [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    });
 }
 
 - (void)hide {
-	@synchronized (self) {
-		showCount--;
-		
-		if (showCount == 0) {
-			[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-		}
-	}
+    [self hideAfterDelay:0.0f];
 }
 
 - (void)hideAfterDelay:(NSTimeInterval)interval {
-	[self performSelector:@selector(hide) withObject:nil afterDelay:interval];
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(interval * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		showCount--;
+		if (showCount <= 0) [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    });
 }
 
 @end

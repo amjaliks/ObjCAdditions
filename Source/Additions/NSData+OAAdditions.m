@@ -20,4 +20,17 @@
 				];
 }
 
+- (NSString *)hexString
+{
+    const unsigned char *bytes = (const unsigned char *) [self bytes];
+    size_t length = [self length];
+    
+    NSMutableString *hexString = [NSMutableString stringWithCapacity:length];
+    for (size_t i = 0; i < length; i++) {
+        [hexString appendFormat:@"%02x", bytes[i]];
+    }
+    
+    return [hexString copy];
+}
+
 @end

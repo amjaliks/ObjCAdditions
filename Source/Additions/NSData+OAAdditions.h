@@ -8,5 +8,6 @@
 @interface NSData (MD5)
 
 - (NSString *)MD5Hash;
+- (NSString *)hexString;
 
 @end
