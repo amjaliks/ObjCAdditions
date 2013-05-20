@@ -18,6 +18,7 @@
 //
 
 
+#import <QuartzCore/QuartzCore.h>
 #import "UITableView+OAAdditions.h"
 
 @implementation UITableView (OAAdditions)
@@ -27,6 +28,19 @@
 	NSIndexPath *indexPath = [self indexPathForSelectedRow];
 	[self reloadData];
 	[self selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];	
+}
+
+- (void)reloadData:(BOOL)animated
+{
+    [self reloadData];
+    
+    if (animated) {
+        CATransition *animation = [CATransition animation];
+        [animation setType:kCATransitionFade];
+        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+        [animation setDuration:.25];
+        [[self layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
+    }
 }
 
 @end

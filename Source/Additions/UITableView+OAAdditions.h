@@ -21,5 +21,6 @@
 @interface UITableView (OAAdditions)
 
 - (void)reloadDataPreservingSelection;
+- (void)reloadData:(BOOL)animation;
 
 @end
