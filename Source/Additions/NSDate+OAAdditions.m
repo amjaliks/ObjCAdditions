@@ -42,4 +42,11 @@
 	return selfComponents.year == todayComponents.year && selfComponents.month == todayComponents.month && selfComponents.day == todayComponents.day;
 }
 
+- (NSString *)formattedShortDate
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    return [formatter stringFromDate:self];
+}
+
 @end

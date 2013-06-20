@@ -35,4 +35,6 @@
 
 - (BOOL)isToday;
 
+- (NSString *)formattedShortDate;
+
 @end
