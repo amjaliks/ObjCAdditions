@@ -32,8 +32,11 @@
  Parses ISO8601 compliant formated string with date and returns NSDate
  */
 + (NSDate *)dateFromISO8601String:(NSString *)string;
++ (NSDate *)tomorrow;
 
 - (BOOL)isToday;
+- (BOOL)isTomorrow;
+- (BOOL)isSameDay:(NSDate *)date;
 
 - (NSString *)formattedShortDate;
 

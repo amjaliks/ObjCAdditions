@@ -33,13 +33,33 @@
 	return [formater dateFromString:string];
 }
 
++ (NSDate *)tomorrow
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *today = [calendar dateFromComponents:[calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:[NSDate date]]];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setDay:1];
+    return [calendar dateByAddingComponents:components toDate:today options:0];
+}
+
 - (BOOL)isToday
 {
-	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    return [self isSameDay:[NSDate date]];
+}
+
+- (BOOL)isTomorrow
+{
+    return [self isSameDay:[NSDate tomorrow]];
+}
+
+- (BOOL)isSameDay:(NSDate *)day
+{
+	NSCalendar *calendar = [NSCalendar currentCalendar];
 	NSDateComponents *selfComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:self];
-	NSDateComponents *todayComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:[NSDate date]];
+	NSDateComponents *dayComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:day];
 	
-	return selfComponents.year == todayComponents.year && selfComponents.month == todayComponents.month && selfComponents.day == todayComponents.day;
+	return selfComponents.year == dayComponents.year && selfComponents.month == dayComponents.month && selfComponents.day == dayComponents.day;
 }
 
 - (NSString *)formattedShortDate
