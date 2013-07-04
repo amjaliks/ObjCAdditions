@@ -36,5 +36,6 @@
 - (NSString *)macAddress;
 - (NSString *)hashedMacAddress;
 - (NSString *)UUID;
+- (NSString *)hardwareModel;
 
 @end

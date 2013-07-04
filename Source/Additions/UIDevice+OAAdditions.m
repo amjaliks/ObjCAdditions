@@ -109,4 +109,19 @@
     return identifier;
 }
 
+- (NSString *)hardwareModel {
+    static NSString *hardwareModel = nil;
+    if (!hardwareModel) {
+        char buffer[128];
+        size_t length = sizeof(buffer);
+        if (sysctlbyname("hw.machine", &buffer, &length, NULL, 0) == 0) {
+            hardwareModel = [[NSString allocWithZone:NULL] initWithCString:buffer encoding:NSASCIIStringEncoding];
+        }
+        if (!hardwareModel || [hardwareModel length] == 0) {
+            hardwareModel = @"unknown";
+        }
+    }
+    return hardwareModel;
+}
+
 @end
