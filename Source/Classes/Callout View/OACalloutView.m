@@ -89,32 +89,28 @@
 	return self;
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
-
 - (void)prepareView {
 	self.backgroundColor = [UIColor clearColor];
 	self.opaque = NO;
 	
-	self.calloutLeft = [[[UIImageView alloc] init] autorelease];
+	self.calloutLeft = [[UIImageView alloc] init];
 	self.calloutLeft.image = self.calloutLeftImage;
 	[self addSubview:self.calloutLeft];
 
-	self.calloutCenter = [[[UIImageView alloc] init] autorelease];
+	self.calloutCenter = [[UIImageView alloc] init];
 	self.calloutCenter.image = self.calloutCenterImage;
 	[self addSubview:self.calloutCenter];
 		
-	self.calloutRight = [[[UIImageView alloc] init] autorelease];
+	self.calloutRight = [[UIImageView alloc] init];
 	self.calloutRight.image = self.calloutRightImage;
 	[self addSubview:self.calloutRight];
 
-	self.calloutTitleLabel = [[[UILabel alloc] init] autorelease];
+	self.calloutTitleLabel = [[UILabel alloc] init];
 	self.calloutTitleLabel.font = [UIFont boldSystemFontOfSize:TITLE_FONT_SIZE];
 	self.calloutTitleLabel.textColor = [UIColor whiteColor];
 	self.calloutTitleLabel.backgroundColor = [UIColor clearColor];
 	
-	self.calloutSubtitleLabel = [[[UILabel alloc] init] autorelease];
+	self.calloutSubtitleLabel = [[UILabel alloc] init];
 	self.calloutSubtitleLabel.font = [UIFont systemFontOfSize:SUBTITLE_FONT_SIZE];
 	self.calloutSubtitleLabel.textColor = [UIColor whiteColor];
 	self.calloutSubtitleLabel.backgroundColor = [UIColor clearColor];
