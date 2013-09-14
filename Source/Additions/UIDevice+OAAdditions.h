@@ -33,8 +33,6 @@
  */
 - (BOOL)systemVersionEqualsOrLater:(NSString *)requiredVersion;
 
-- (NSString *)macAddress;
-- (NSString *)hashedMacAddress;
 - (NSString *)UUID;
 - (NSString *)hardwareModel;
 

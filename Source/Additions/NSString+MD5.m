@@ -9,14 +9,6 @@
 
 @implementation NSString (MD5)
 
-+ (NSString *)generateUUID
-{
-	CFUUIDRef uuid = CFUUIDCreate(NULL);
-	CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
-	CFRelease(uuid);
-	return (__bridge NSString *)uuidStr;
-}
-
 - (NSString *)MD5Hash {
 	const char *cStr = [self UTF8String];
 	
