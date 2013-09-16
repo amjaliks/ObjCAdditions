@@ -47,6 +47,7 @@
 @property (nonatomic) CGFloat labelOriginY;
 @property (nonatomic) CGFloat labelHeight;
 @property (nonatomic, retain, readonly) UIButton *calloutButton;
+@property (nonatomic, strong) UIView *rightView;
 
 - (id)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage;
 - (void)showAnimated:(UIView *)parent;

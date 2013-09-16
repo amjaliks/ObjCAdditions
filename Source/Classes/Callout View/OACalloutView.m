@@ -117,9 +117,7 @@
 	
 	self.calloutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 	self.calloutButton.adjustsImageWhenHighlighted = NO;
-	[self addSubview:self.calloutButton];
-	
-	[self updateLayout:NO];
+    self.rightView = self.calloutButton;
 }
 
 
@@ -173,10 +171,10 @@
 	self.calloutTitleLabel.frame = titleLabelFrame;
 	self.calloutSubtitleLabel.frame = subtitleLabelFrame;
 	
-	CGRect buttonFrame = self.calloutButton.frame;
-	buttonFrame.origin.x = frame.size.width - buttonFrame.size.width - MIN_RIGHT_IMAGE_WIDTH + 4.0f;
-	buttonFrame.origin.y = self.labelOriginY + floorf((self.labelHeight - buttonFrame.size.height) / 2.0f);
-	self.calloutButton.frame = buttonFrame;
+	CGRect rightViewFrame = self.rightView.frame;
+	rightViewFrame.origin.x = frame.size.width - rightViewFrame.size.width - MIN_RIGHT_IMAGE_WIDTH + 4.0f;
+	rightViewFrame.origin.y = self.labelOriginY + floorf((self.labelHeight - rightViewFrame.size.height) / 2.0f);
+	self.rightView.frame = rightViewFrame;
 	
 	self.layer.anchorPoint = CGPointMake(0.5f, ANCHOR_Y / self.frame.size.height);
 	self.center = anchorPoint;
@@ -268,8 +266,19 @@
 	[self.calloutButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)setRightView:(UIView *)rightView
+{
+    if (_rightView != rightView) {
+        [_rightView removeFromSuperview];
+        _rightView = rightView;
+        
+        [self addSubview:rightView];
+        [self updateLayout:NO];
+    }
+}
+
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-	return calloutButton && CGRectContainsPoint(calloutButton.frame, point);
+	return self.rightView && CGRectContainsPoint(self.rightView.frame, point);
 }
 
 @end
