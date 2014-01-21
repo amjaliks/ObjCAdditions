@@ -12,7 +12,7 @@
 - (NSString *)MD5Hash {
 	unsigned char result[CC_MD5_DIGEST_LENGTH];
 	
-	CC_MD5([self bytes], [self length], result);
+	CC_MD5(self.bytes, (CC_LONG) self.length, result);
 	return [NSString stringWithFormat:
 				@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
 				result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],
