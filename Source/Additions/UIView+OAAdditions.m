@@ -2,7 +2,7 @@
 //  UIView+OAAdditions.m
 //  ObjCAdditions
 //
-//  Copyright (c) 2013 A25 SIA
+//  Copyright (c) 2014 Aleksejs Mjaliks
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,6 +26,13 @@
 #import "UIView+OAAdditions.h"
 
 @implementation UIView (OAAdditions)
+
++ (instancetype)viewWithBackgroundColor:(UIColor *)color
+{
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = color;
+    return view;
+}
 
 - (void)alignVerticallyView:(UIView *)view left:(CGFloat)left
 {
