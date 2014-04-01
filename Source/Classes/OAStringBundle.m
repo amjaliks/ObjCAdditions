@@ -19,6 +19,7 @@
 
 #import "OAStringBundle.h"
 
+NSString * const OAStringBundleDidLoadStringsNotification = @"OAStringBundleDidLoadStringsNotification";
 NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDidReloadStringsNotification";
 
 
@@ -68,6 +69,7 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 			strings = tmpStrings;
 			localization = newLocalization;
 		}
+        [[NSNotificationCenter defaultCenter] postNotificationName:OAStringBundleDidLoadStringsNotification object:self];
 	}
 }
 

@@ -21,6 +21,7 @@
 
 #define OALocalizedString(key, comment) [[OAStringBundle bundle] localizedStringForKey:key]
 
+extern NSString * const OAStringBundleDidLoadStringsNotification;
 extern NSString * const OAStringBundleDidReloadStringsNotification;
 
 @interface OAStringBundle : NSObject {
