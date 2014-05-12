@@ -32,6 +32,11 @@
  Parses ISO8601 compliant formated string with date and returns NSDate
  */
 + (NSDate *)dateFromISO8601String:(NSString *)string;
+/*
+ * Convience method for NSDate object create with specific date and time.
+ */
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
+                    hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
 + (NSDate *)tomorrow;
 
 - (BOOL)isToday;

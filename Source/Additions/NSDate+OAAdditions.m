@@ -33,6 +33,19 @@
 	return [formater dateFromString:string];
 }
 
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
+                    hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
+{
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    comps.year = year;
+    comps.month = month;
+    comps.day = day;
+    comps.hour = hour;
+    comps.minute = minute;
+    comps.second = second;
+    return [[NSCalendar currentCalendar] dateFromComponents:comps];
+}
+
 + (NSDate *)tomorrow
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
