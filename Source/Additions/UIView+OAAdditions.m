@@ -50,4 +50,13 @@
 	view.frame = CGRectMake(self.bounds.size.width - viewSize.width - right, floorf((self.bounds.size.height - viewSize.height) / 2.0f), viewSize.width, viewSize.height);
 }
 
+- (UIView *)findFirstResponder
+{
+    if (self.isFirstResponder) return self;
+    for (UIView *subview in self.subviews) {
+        return [subview findFirstResponder];
+    }
+    return nil;
+}
+
 @end

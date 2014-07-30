@@ -30,5 +30,6 @@
 + (instancetype)viewWithBackgroundColor:(UIColor *)color;
 - (void)alignVerticallyView:(UIView *)view left:(CGFloat)left;
 - (void)alignVerticallyView:(UIView *)view right:(CGFloat)right;
+- (UIView *)findFirstResponder;
 
 @end
