@@ -29,7 +29,7 @@
 
 + (instancetype)viewWithBackgroundColor:(UIColor *)color
 {
-    UIView *view = [[UIView alloc] init];
+    UIView *view = [[self alloc] init];
     view.backgroundColor = color;
     return view;
 }
