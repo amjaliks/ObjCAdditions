@@ -23,6 +23,8 @@
 		1748326C127F7F550073918D /* OANetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748326A127F7F550073918D /* OANetworkActivityIndicator.m */; };
 		174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 174832F9127FF5850073918D /* UIDevice+OAAdditions.h */; };
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
+		1751BC6A1A58B9B20006A57B /* CAAnimation+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1751BC681A58B9B20006A57B /* CAAnimation+OAAdditions.h */; };
+		1751BC6B1A58B9B20006A57B /* CAAnimation+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1751BC691A58B9B20006A57B /* CAAnimation+OAAdditions.m */; };
 		178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B10EB13355309007B485F /* NSNull+OAAdditions.m */; };
 		179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D7A4C130C8B2300E41304 /* OACalloutView.h */; };
 		179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179D7A4D130C8B2300E41304 /* OACalloutView.m */; };
@@ -66,6 +68,8 @@
 		1748326A127F7F550073918D /* OANetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OANetworkActivityIndicator.m; sourceTree = "<group>"; };
 		174832F9127FF5850073918D /* UIDevice+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+OAAdditions.h"; sourceTree = "<group>"; };
 		174832FA127FF5850073918D /* UIDevice+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OAAdditions.m"; sourceTree = "<group>"; };
+		1751BC681A58B9B20006A57B /* CAAnimation+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+OAAdditions.h"; sourceTree = "<group>"; };
+		1751BC691A58B9B20006A57B /* CAAnimation+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+OAAdditions.m"; sourceTree = "<group>"; };
 		1758AC5812CD2559006C4F86 /* OASoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASoundManager.h; sourceTree = "<group>"; };
 		1758AC5912CD2559006C4F86 /* OASoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OASoundManager.m; sourceTree = "<group>"; };
 		1758AC5D12CD2781006C4F86 /* OASound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASound.h; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 		1748323E127F7BF00073918D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				1751BC681A58B9B20006A57B /* CAAnimation+OAAdditions.h */,
+				1751BC691A58B9B20006A57B /* CAAnimation+OAAdditions.m */,
 				17CD77F612DA327F0023B633 /* CGGeometry+OAAdditions.h */,
 				17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */,
 				178B10EE133553AA007B485F /* Foundation+OAAdditions.h */,
@@ -291,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17382DC713369DAF0079A48B /* UIKit+OAAdditions.h in Headers */,
+				1751BC6A1A58B9B20006A57B /* CAAnimation+OAAdditions.h in Headers */,
 				17BF02631332C6830022E057 /* OAStringBundle.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */,
 				1748326B127F7F550073918D /* OANetworkActivityIndicator.h in Headers */,
@@ -323,7 +330,7 @@
 			name = iOSTests;
 			productName = iOSTests;
 			productReference = 17AC0DFD129F225C0010FE39 /* iOSTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		D2AAC07D0554694100DB518D /* iOS */ = {
 			isa = PBXNativeTarget;
@@ -423,6 +430,7 @@
 				17F6E8F8129498CD00966E3C /* NSDate+OAAdditions.m in Sources */,
 				17130B3B12A6F5E8005379C2 /* NSArray+OAAdditions.m in Sources */,
 				17CD77F912DA327F0023B633 /* CGGeometry+OAAdditions.m in Sources */,
+				1751BC6B1A58B9B20006A57B /* CAAnimation+OAAdditions.m in Sources */,
 				179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */,
 				17BF02641332C6830022E057 /* OAStringBundle.m in Sources */,
 				178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */,
