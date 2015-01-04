@@ -25,6 +25,8 @@
 		174832FC127FF5850073918D /* UIDevice+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 174832FA127FF5850073918D /* UIDevice+OAAdditions.m */; };
 		1751BC6A1A58B9B20006A57B /* CAAnimation+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1751BC681A58B9B20006A57B /* CAAnimation+OAAdditions.h */; };
 		1751BC6B1A58B9B20006A57B /* CAAnimation+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1751BC691A58B9B20006A57B /* CAAnimation+OAAdditions.m */; };
+		1751BC6F1A58BB540006A57B /* CALayer+OAAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1751BC6D1A58BB540006A57B /* CALayer+OAAdditions.h */; };
+		1751BC701A58BB540006A57B /* CALayer+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1751BC6E1A58BB540006A57B /* CALayer+OAAdditions.m */; };
 		178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B10EB13355309007B485F /* NSNull+OAAdditions.m */; };
 		179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D7A4C130C8B2300E41304 /* OACalloutView.h */; };
 		179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 179D7A4D130C8B2300E41304 /* OACalloutView.m */; };
@@ -70,6 +72,8 @@
 		174832FA127FF5850073918D /* UIDevice+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+OAAdditions.m"; sourceTree = "<group>"; };
 		1751BC681A58B9B20006A57B /* CAAnimation+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+OAAdditions.h"; sourceTree = "<group>"; };
 		1751BC691A58B9B20006A57B /* CAAnimation+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+OAAdditions.m"; sourceTree = "<group>"; };
+		1751BC6D1A58BB540006A57B /* CALayer+OAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+OAAdditions.h"; sourceTree = "<group>"; };
+		1751BC6E1A58BB540006A57B /* CALayer+OAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+OAAdditions.m"; sourceTree = "<group>"; };
 		1758AC5812CD2559006C4F86 /* OASoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASoundManager.h; sourceTree = "<group>"; };
 		1758AC5912CD2559006C4F86 /* OASoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OASoundManager.m; sourceTree = "<group>"; };
 		1758AC5D12CD2781006C4F86 /* OASound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASound.h; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			children = (
 				1751BC681A58B9B20006A57B /* CAAnimation+OAAdditions.h */,
 				1751BC691A58B9B20006A57B /* CAAnimation+OAAdditions.m */,
+				1751BC6D1A58BB540006A57B /* CALayer+OAAdditions.h */,
+				1751BC6E1A58BB540006A57B /* CALayer+OAAdditions.m */,
 				17CD77F612DA327F0023B633 /* CGGeometry+OAAdditions.h */,
 				17CD77F712DA327F0023B633 /* CGGeometry+OAAdditions.m */,
 				178B10EE133553AA007B485F /* Foundation+OAAdditions.h */,
@@ -302,6 +308,7 @@
 				AA747D9F0F9514B9006C5449 /* ObjCAdditions_Prefix.pch in Headers */,
 				1748326B127F7F550073918D /* OANetworkActivityIndicator.h in Headers */,
 				174832FB127FF5850073918D /* UIDevice+OAAdditions.h in Headers */,
+				1751BC6F1A58BB540006A57B /* CALayer+OAAdditions.h in Headers */,
 				17F6E8F3129498A300966E3C /* ISO8601DateFormatter.h in Headers */,
 				179D7A4E130C8B2300E41304 /* OACalloutView.h in Headers */,
 				17382DC41336949B0079A48B /* UISearchBar+OAAdditions.h in Headers */,
@@ -433,6 +440,7 @@
 				1751BC6B1A58B9B20006A57B /* CAAnimation+OAAdditions.m in Sources */,
 				179D7A4F130C8B2300E41304 /* OACalloutView.m in Sources */,
 				17BF02641332C6830022E057 /* OAStringBundle.m in Sources */,
+				1751BC701A58BB540006A57B /* CALayer+OAAdditions.m in Sources */,
 				178B10ED13355309007B485F /* NSNull+OAAdditions.m in Sources */,
 				17382DC51336949B0079A48B /* UISearchBar+OAAdditions.m in Sources */,
 				179F5E4A1366366D000A1CFF /* UIScrollView+OAAdditions.m in Sources */,
