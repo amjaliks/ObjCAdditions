@@ -2,7 +2,7 @@
 //  UISearchBar+OAAdditions.h
 //  ObjCAdditions
 //
-// Copyright 2011 A25 SIA
+// Copyright 2015 A25 SIA
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 // limitations under the License.
 //
 
-
-#import <QuartzCore/QuartzCore.h>
 #import "UITableView+OAAdditions.h"
+#import "CALayer+OAAdditions.h"
+
 
 @implementation UITableView (OAAdditions)
 
@@ -33,14 +33,7 @@
 - (void)reloadData:(BOOL)animated
 {
     [self reloadData];
-    
-    if (animated) {
-        CATransition *animation = [CATransition animation];
-        [animation setType:kCATransitionFade];
-        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
-        [animation setDuration:.25];
-        [[self layer] addAnimation:animation forKey:@"UITableViewReloadDataAnimationKey"];
-    }
+    if (animated) [self.layer addFadeTransitionAnimationWithDuration:.25];
 }
 
 @end
