@@ -24,14 +24,8 @@
 //
 
 #import "NSDate+OAAdditions.h"
-#import "ISO8601DateFormatter.h"
 
 @implementation NSDate (OAAdditions)
-
-+ (NSDate *)dateFromISO8601String:(NSString *)string {
-	ISO8601DateFormatter *formater = [[ISO8601DateFormatter alloc] init];
-	return [formater dateFromString:string];
-}
 
 + (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day
                     hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;

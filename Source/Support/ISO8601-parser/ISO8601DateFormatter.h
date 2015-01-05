@@ -69,3 +69,13 @@ extern unichar ISO8601DefaultTimeSeparatorCharacter;
 - (NSString *) stringFromDate:(NSDate *)date timeZone:(NSTimeZone *)timeZone;
 
 @end
+
+
+@interface NSDate (ISO8601)
+/*
+ Parses ISO8601 compliant formated string with date and returns NSDate
+ */
++ (NSDate *)dateFromISO8601String:(NSString *)string;
+
+@end
+

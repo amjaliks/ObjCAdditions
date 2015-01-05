@@ -833,3 +833,13 @@ static BOOL is_leap_year(NSInteger year) {
 	&& (((year % 100U) != 0U)
 	||  ((year % 400U) == 0U));
 }
+
+
+@implementation NSDate (ISO8601)
+
++ (NSDate *)dateFromISO8601String:(NSString *)string {
+	ISO8601DateFormatter *formater = [[ISO8601DateFormatter alloc] init];
+	return [formater dateFromString:string];
+}
+
+@end
