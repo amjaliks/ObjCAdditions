@@ -20,7 +20,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UISearchBar (OAAdditions)
+@interface UIView (OAAdditions)
 
 @property (readonly) UIButton *cancelButton;
 

@@ -20,13 +20,15 @@
 #import "UISearchBar+OAAdditions.h"
 
 
-@implementation UISearchBar (OAAdditions)
+@implementation UIView (OAAdditions)
 
 - (UIButton *)cancelButton {
 	for (UIView *subview in self.subviews){
 		if([subview isKindOfClass:UIButton.class]){
 			return (UIButton *)subview;
-		}
+        } else {
+            return [subview cancelButton];
+        }
 	}
 	return nil;
 }
