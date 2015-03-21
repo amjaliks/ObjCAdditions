@@ -42,17 +42,37 @@
         UIColor *color = cache[name];
         if (color) return color;
         
-        NSArray *components = colors[name];
-        if (components) {
-            color = [UIColor colorWithRed:[components[0] doubleValue] / 255.0
-                                    green:[components[1] doubleValue] / 255.0
-                                     blue:[components[2] doubleValue] / 255.0
-                                    alpha:components.count >= 4 ? ([components[3] doubleValue] / 255.0) : 1.0];
-            cache[name] = color;
-            return color;
+        id value = colors[name];
+        if ([value isKindOfClass:[NSArray class]]) {
+            color = [UIColor colorWithArray:value];
+        } else if ([value isKindOfClass:[NSString class]]) {
+            color = [UIColor colorWithString:value];
         }
+        if (color) cache[name] = color;
+        return color;
     }
     return nil;
+}
+
++ (instancetype)colorWithArray:(NSArray *)array
+{
+    return [UIColor colorWithRed:[array[0] doubleValue] / 255.0
+                           green:[array[1] doubleValue] / 255.0
+                            blue:[array[2] doubleValue] / 255.0
+                           alpha:array.count >= 4 ? ([array[3] doubleValue] / 255.0) : 1.0];
+}
+
+// Based on http://stackoverflow.com/a/12397366/195173
++ (instancetype)colorWithString:(NSString *)string
+{
+    unsigned value = 0;
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    [scanner setScanLocation:1]; // bypass '#' character
+    [scanner scanHexInt:&value];
+    return [UIColor colorWithRed:((value & 0xFF0000) >> 16) / 255.0
+                           green:((value & 0x00FF00) >>  8) / 255.0
+                            blue: (value & 0x0000FF)        / 255.0
+                           alpha:1.0];
 }
 
 @end
