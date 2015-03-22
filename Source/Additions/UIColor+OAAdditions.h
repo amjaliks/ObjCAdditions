@@ -29,4 +29,6 @@
 
 + (instancetype)colorNamed:(NSString *)name;
 
+- (UIColor *)colorMultipliedBy:(CGFloat)multiplyer;
+
 @end

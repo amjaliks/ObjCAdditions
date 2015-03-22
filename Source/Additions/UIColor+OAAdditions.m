@@ -75,4 +75,16 @@
                            alpha:1.0];
 }
 
+- (UIColor *)colorMultipliedBy:(CGFloat)multiplyer
+{
+    CGFloat red = -1.0, green, blue, alpha;
+    [self getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    if (red != -1.0) {
+        return [UIColor colorWithRed:red * multiplyer green:green * multiplyer blue:blue * multiplyer alpha:alpha];
+    } else {
+        return nil;
+    }
+}
+
 @end
