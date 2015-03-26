@@ -42,6 +42,11 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 	return bundle;
 }
 
++ (NSString *)localization
+{
+    return [self bundle].localization;
+}
+
 + (NSString *)localizedStringForKey:(NSString *)key
 {
     return [[self bundle] localizedStringForKey:key];

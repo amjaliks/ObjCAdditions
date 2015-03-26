@@ -30,6 +30,7 @@ extern NSString * const OAStringBundleDidReloadStringsNotification;
 }
 
 + (OAStringBundle *)bundle;
++ (NSString *)localization;
 + (NSString *)localizedStringForKey:(NSString *)key;
 - (NSString *)localization;
 - (NSString *)localizedStringForKey:(NSString *)key;
