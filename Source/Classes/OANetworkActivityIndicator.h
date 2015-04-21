@@ -35,6 +35,10 @@
 
 + (OANetworkActivityIndicator *)networkActivityIndicator;
 
++ (void)show;
++ (void)hide;
++ (void)hideAfterDelay:(NSTimeInterval)interval;
+
 - (void)show;
 - (void)hide;
 - (void)hideAfterDelay:(NSTimeInterval)interval;

@@ -36,6 +36,18 @@
 	return networkActivityIndicator;
 }
 
++ (void)show {
+    [[self networkActivityIndicator] show];
+}
+
++ (void)hide {
+    [[self networkActivityIndicator] hide];
+}
+
++ (void)hideAfterDelay:(NSTimeInterval)interval {
+    [[self networkActivityIndicator] hideAfterDelay:interval];
+}
+
 - (void)show {
     dispatch_async(dispatch_get_main_queue(), ^{
 		showCount++;
