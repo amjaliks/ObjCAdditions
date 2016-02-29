@@ -52,25 +52,14 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
     return [[self bundle] localizedStringForKey:key];
 }
 
-+ (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value
-{
-	return [[self bundle] localizedStringForKey:key value:value];
-}
-
 - (NSString *)localization
 {
 	return localization;
 }
 
-- (NSString *)localizedStringForKey:(NSString *)key
-{
-	return [self localizedStringForKey:key value:key];
-}
-
-- (NSString *)localizedStringForKey:(NSString *)key value:(NSString *)value
-{
-	NSString *string = strings[key];
-	return string ? string : value;
+- (NSString *)localizedStringForKey:(NSString *)key {
+	NSString *string = [strings objectForKey:key];
+	return string ? string : key;
 }
 
 - (NSString *)preferredLocalization {

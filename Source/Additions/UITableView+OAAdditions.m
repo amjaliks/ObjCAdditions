@@ -32,8 +32,8 @@
 
 - (void)reloadData:(BOOL)animated
 {
+	if (animated) [self.layer addFadeTransitionAnimationWithDuration:.25];
     [self reloadData];
-    if (animated) [self.layer addFadeTransitionAnimationWithDuration:.25];
 }
 
 @end
