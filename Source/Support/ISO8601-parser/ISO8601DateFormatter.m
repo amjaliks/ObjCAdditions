@@ -117,7 +117,7 @@ static BOOL is_leap_year(NSInteger year);
 	NSDate *now = [NSDate date];
 
 	NSDateComponents *components = [[NSDateComponents alloc] init];
-	NSDateComponents *nowComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit) fromDate:now];
+	NSDateComponents *nowComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:now];
 
 	NSInteger
 		//Date
@@ -665,13 +665,13 @@ static BOOL is_leap_year(NSInteger year);
 - (NSString *) weekDateStringForDate:(NSDate *)date timeZone:(NSTimeZone *)timeZone {
 	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	calendar.timeZone = timeZone;
-	NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSWeekdayCalendarUnit | NSDayCalendarUnit fromDate:date];
+	NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitWeekday | NSCalendarUnitDay fromDate:date];
 
 	//Determine the ordinal date.
-	NSDateComponents *startOfYearComponents = [calendar components:NSYearCalendarUnit fromDate:date];
+	NSDateComponents *startOfYearComponents = [calendar components:NSCalendarUnitYear fromDate:date];
 	startOfYearComponents.month = 1;
 	startOfYearComponents.day = 1;
-	NSDateComponents *ordinalComponents = [calendar components:NSDayCalendarUnit fromDate:[calendar dateFromComponents:startOfYearComponents] toDate:date options:0];
+	NSDateComponents *ordinalComponents = [calendar components:NSCalendarUnitDay fromDate:[calendar dateFromComponents:startOfYearComponents] toDate:date options:0];
 	ordinalComponents.day += 1;
 
 	enum {

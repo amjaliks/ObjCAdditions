@@ -43,7 +43,7 @@
 + (NSDate *)tomorrow
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDate *today = [calendar dateFromComponents:[calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:[NSDate date]]];
+    NSDate *today = [calendar dateFromComponents:[calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:[NSDate date]]];
     
     NSDateComponents *components = [[NSDateComponents alloc] init];
     [components setDay:1];
@@ -63,8 +63,8 @@
 - (BOOL)isSameDay:(NSDate *)day
 {
 	NSCalendar *calendar = [NSCalendar currentCalendar];
-	NSDateComponents *selfComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:self];
-	NSDateComponents *dayComponents = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:day];
+	NSDateComponents *selfComponents = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:self];
+	NSDateComponents *dayComponents = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:day];
 	
 	return selfComponents.year == dayComponents.year && selfComponents.month == dayComponents.month && selfComponents.day == dayComponents.day;
 }
