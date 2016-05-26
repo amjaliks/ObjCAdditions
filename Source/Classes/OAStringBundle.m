@@ -25,6 +25,8 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 
 @interface OAStringBundle ()
 
+@property (copy, nonatomic) NSString *defaultLocalization;
+
 - (NSString *)preferredLocalization;
 - (void)loadLocalization:(NSString *)localization;
 
@@ -57,6 +59,14 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 	return [[self bundle] localizedStringForKey:key value:value];
 }
 
+- (instancetype)init {
+	self = [super init];
+	if (self) {
+		_defaultLocalization = @"en";
+	}
+	return self;
+}
+
 - (NSString *)localization
 {
 	return localization;
@@ -74,12 +84,14 @@ NSString * const OAStringBundleDidReloadStringsNotification = @"OAStringBundleDi
 }
 
 - (NSString *)preferredLocalization {
-	for (NSString *curLocalization in [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"]) {
-		if ([[[NSBundle mainBundle] localizations] containsObject:curLocalization]) {
-			return curLocalization;
+	for (NSString *preferred in [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"]) {
+		for (NSString *available in [[NSBundle mainBundle] localizations]) {
+			if ([preferred hasPrefix:available]) {
+				return available;
+			}
 		}
 	}
-	return @"en";
+	return self.defaultLocalization;
 }
 
 - (void)loadLocalization:(NSString *)newLocalization {
